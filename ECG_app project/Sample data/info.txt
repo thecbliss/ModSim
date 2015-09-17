@@ -1,0 +1,2 @@
+Sampleing Rate : 1000khz / 1000 samples/sec
+voltage range : 0 to 5V

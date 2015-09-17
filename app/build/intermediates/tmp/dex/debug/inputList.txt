@@ -1,0 +1,3 @@
+C:\Users\Bliss\AndroidstudioProjects\Mod_Sim15\app\build\intermediates\classes\debug
+C:\Users\Bliss\AndroidstudioProjects\Mod_Sim15\app\build\intermediates\pre-dexed\debug\GraphView-3.1.1-1c0b4864a78178bedee34442692439d60a486c48.jar
+C:\Users\Bliss\AndroidstudioProjects\Mod_Sim15\app\build\intermediates\pre-dexed\debug\support-v4-18.0.0-6bbb050909410afb191ebb0e7d3358c49a6fa3cf.jar

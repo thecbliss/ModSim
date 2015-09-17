@@ -1,0 +1,1757 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0140)http://www.cooking-hacks.com/index.php/documentation/tutorials/raspberry-pi-to-arduino-shields-connection-bridge?utm_source=banner_raspberry -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge</title>
+<meta name="description" content="Electronics for DIY and the Internet of Things (IoT) Community. Arduino, Raspberry Pi, 3D Printers and Robotic projects. Open Source Sensor Networks for developers">
+<meta name="keywords" content="Arduino, Rasberri Pi, Raspi, 3D printer, 3D printing, DIY, sensors, actuators, robotics, open source, open hardware, community, makers, eHealth, e-Health, 3G, ZigBee, WiFi, GPRS, Bluetooth, 802.15.4, low cost, electronics, sparkfun distributor, seeed distributor, dfrobot distributor">
+<meta name="robots" content="INDEX,FOLLOW">
+<link rel="icon" href="http://www.cooking-hacks.com/skin/frontend/default/cooking/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="http://www.cooking-hacks.com/skin/frontend/default/cooking/favicon.ico" type="image/x-icon">
+<link rel="alternate" href="http://www.cooking-hacks.com/news.rss" title="Cooking Hacks News" type="application/rss+xml">
+<!--[if lt IE 7]>
+<script type="text/javascript">
+//<![CDATA[
+    var BLANK_URL = 'http://www.cooking-hacks.com/js/blank.html';
+    var BLANK_IMG = 'http://www.cooking-hacks.com/js/spacer.gif';
+//]]>
+</script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/f2ea247ac2604b0606c29b9e4ee9abd8.css" media="all">
+<link rel="stylesheet" type="text/css" href="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/a3d5970294290ee8f6b4970f4797c60b.css" media="print">
+<script type="text/javascript" src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/cde20ecbfacf69ec5e8cbc3174a4b67d.js"></script>
+<!--[if lte IE 7]>
+<link rel="stylesheet" type="text/css" href="http://www.cooking-hacks.com/media/css/f806a89abc9e78d54f625f51e4dcd2a0.css" media="all" />
+<![endif]-->
+<!--[if gte IE 8]>
+<link rel="stylesheet" type="text/css" href="http://www.cooking-hacks.com/media/css/b94b29fc43ca5adbb9335706f974f4c6.css" media="all" />
+<![endif]-->
+<!--[if lt IE 7]>
+<script type="text/javascript" src="http://www.cooking-hacks.com/media/js/de6b913831dfd9a3c44d892edbc05833.js"></script>
+<![endif]-->
+
+<script type="text/javascript">
+//<![CDATA[
+Mage.Cookies.path     = '/';
+Mage.Cookies.domain   = '.www.cooking-hacks.com';
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+optionalZipCountries = [];
+//]]>
+</script>
+<link rel="alternate" type="application/rss+xml" title="Cooking Hacks Blog - RSS Feed" href="http://www.cooking-hacks.com/index.php/blog/feed">
+<script type="text/javascript">var Translator = new Translate({"Please use only letters (a-z or A-Z), numbers (0-9) or underscore(_) in this field, first character should be a letter.":"Please use only letters (a-z or A-Z), numbers (0-9) or underscores (_) in this field, first character must be a letter."});</script><script type="text/javascript" src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/jquery.min.js" <="" script="">
+<script>window.jQuery || document.write(unescape('%3Cscript src="/js/jquery/jquery-1.7.js"%3E%3C/script%3E'))</script>
+<script type="text/javascript">var $j = jQuery.noConflict();</script>
+<script src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/cycle.js" type="text/javascript"></script>
+<script src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/auxiliar.js" type="text/javascript"></script><script type="text/javascript" async="" src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/ga.js"></script></head>
+<body class=" cms-page-view cms-documentation-tutorials-raspberry-pi-to-arduino-shields-connection-bridge">
+
+<!-- BEGIN GOOGLE ANALYTICS CODE -->
+<script type="text/javascript">
+//<![CDATA[
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+    })();
+
+    var _gaq = _gaq || [];
+
+_gaq.push(['_setAccount', 'UA-19708093-1']);
+_gaq.push(['_trackPageview']);
+
+
+//]]>
+</script>
+<!-- END GOOGLE ANALYTICS CODE --><div class="wrapper">
+        <noscript>
+        &lt;div class="noscript"&gt;
+            &lt;div class="noscript-inner"&gt;
+                &lt;p&gt;&lt;strong&gt;JavaScript seem to be disabled in your browser.&lt;/strong&gt;&lt;/p&gt;
+                &lt;p&gt;You must have JavaScript enabled in your browser to utilize the functionality of this website.&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    </noscript>
+    <div class="page">
+        <div class="header-container">
+    <div class="header">
+	<div class="logo_libelium"><a href="http://www.libelium.com/" title="http://www.libelium.com" class="logo_libelium"><img src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/logo_libelium.png" alt="libelium"></a></div>
+
+                <a href="http://www.cooking-hacks.com/index.php/" title="Cooking Hacks by Libelium" class="logo"><strong>Cooking Hacks by Libelium</strong><img src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/logo.png" alt="Cooking Hacks by Libelium"></a>
+
+        
+        
+        <div class="quick-access">
+
+
+            <ul class="links">
+                        <li class="first"><a href="http://www.cooking-hacks.com/index.php/customer/account/" title="My Account">My Account</a></li>
+                                <li><a href="http://www.cooking-hacks.com/index.php/wishlist/" title="Wishlist">Wishlist</a></li>
+                                <li><a href="http://www.cooking-hacks.com/index.php/checkout/cart/" title="Cart (2 items)" class="top-link-cart">Cart (2 items)</a></li>
+                                <li><a href="http://www.cooking-hacks.com/index.php/checkout/" title="Checkout" class="top-link-checkout">Checkout</a></li>
+                                <li class=" last"><a href="http://www.cooking-hacks.com/index.php/customer/account/login/" title="Log In">Log In</a></li>
+            </ul>
+            <form id="search_mini_form" action="http://www.cooking-hacks.com/index.php/catalogsearch/result/" method="get">
+    <div class="form-search">
+        <label for="search">Search:</label>
+        <input id="search" type="text" name="q" value="" class="input-text" autocomplete="off">
+        <button type="submit" title="Search" class="button"><span><span>Search</span></span></button>
+        <div id="search_autocomplete" class="search-autocomplete" style="display: none;"></div>
+        <script type="text/javascript">
+        //<![CDATA[
+            var searchForm = new Varien.searchForm('search_mini_form', 'search', 'Search entire store here...');
+            searchForm.initAutocomplete('http://www.cooking-hacks.com/index.php/catalogsearch/ajax/suggest/', 'search_autocomplete');
+        //]]>
+        </script>
+    </div>
+</form>
+			
+			<div id="iconos_redes_sociales">
+                            <div class="button_fb_container">
+        <div class="outerframe" style="width:57px;height:25px;overflow:hidden;position:relative;">
+        <iframe id="innerframe" style="position:absolute;top:-31px;left:-56px;border:none; overflow:hidden; width:292px; height:62px;" src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/likebox.htm" scrolling="no" frameborder="0" allowtransparency="true"></iframe>
+        </div>
+    </div>
+			<ul>	
+			<li class="icon_follow_us"><a href="http://www.cooking-hacks.com/news.rss"><img alt="rss" src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/rss_icon.png"></a></li>
+		    <li class="icon_follow_us"><a href="http://www.flickr.com/photos/cooking-hacks"><img alt="flickr" src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/flickr_icon.png"></a></li>
+		    <li class="icon_follow_us"><a href="http://twitter.com/Cooking_Hacks"><img alt="twitter" src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/twitter_icon.png"></a></li>
+		    <li class="icon_follow_us"><a href="http://www.facebook.com/pages/Cooking-Hacks/161797590502410"><img alt="facebook" src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/facebook_icon.png"></a></li>
+		    <li class="icon_follow_us"><a href="http://www.youtube.com/cookinghacks"><img alt="youtube" src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/youtube_icon.png"></a></li>
+			</ul>
+			</div>
+
+        </div>
+        		
+		
+	<div class="selector_bandera">
+<div class="language-switcher">
+    <ul>
+	<label for="select-language"></label>
+                <li>
+                             <span class="en selected">
+                <img src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/flag_selected_en.png" alt="English"></span>
+                           
+        </li>
+                <li>
+                            <a class="es" href="http://www.cooking-hacks.com/index.php/documentation/tutorials/raspberry-pi-to-arduino-shields-connection-bridge?___store=es&utm_source=banner_raspberry&___from_store=en">
+                <img src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/flag_es.png" alt="Español"></a>
+                           
+        </li>
+            </ul>
+</div>
+
+
+
+</div>
+	<div class="welcome-msg"></div>
+
+    </div>
+
+</div>
+<div class="nav-container">
+    <ul id="nav">
+        <li class="level0 nav-1 level-top first parent">
+<a href="http://www.cooking-hacks.com/index.php/shop.html" class="level-top">
+<span>Shop</span>
+</a>
+<ul class="level0">
+<li class="level1 nav-1-1 first parent">
+<a href="http://www.cooking-hacks.com/index.php/shop/arduino.html" class="">
+<span>Arduino</span>
+</a>
+<ul class="level1">
+<li class="level2 nav-1-1-1 first">
+<a href="http://www.cooking-hacks.com/index.php/shop/arduino/starter-kits.html">
+<span>Starter Kits</span>
+</a>
+</li><li class="level2 nav-1-1-2">
+<a href="http://www.cooking-hacks.com/index.php/shop/arduino/shields.html">
+<span>Shields</span>
+</a>
+</li><li class="level2 nav-1-1-3">
+<a href="http://www.cooking-hacks.com/index.php/shop/arduino/wireless.html">
+<span>Wireless</span>
+</a>
+</li><li class="level2 nav-1-1-4">
+<a href="http://www.cooking-hacks.com/index.php/shop/arduino/packs.html">
+<span>Packs</span>
+</a>
+</li><li class="level2 nav-1-1-5">
+<a href="http://www.cooking-hacks.com/index.php/shop/arduino/enclosures.html">
+<span>Enclosures</span>
+</a>
+</li><li class="level2 nav-1-1-6">
+<a href="http://www.cooking-hacks.com/index.php/shop/arduino/prototyping.html">
+<span>Prototyping</span>
+</a>
+</li><li class="level2 nav-1-1-7">
+<a href="http://www.cooking-hacks.com/index.php/shop/arduino/converters.html">
+<span>Converters</span>
+</a>
+</li><li class="level2 nav-1-1-8">
+<a href="http://www.cooking-hacks.com/index.php/shop/arduino/books.html">
+<span>Books</span>
+</a>
+</li><li class="level2 nav-1-1-9 last">
+<a href="http://www.cooking-hacks.com/index.php/shop/arduino/exclusive-products.html">
+<span>Exclusive Products</span>
+</a>
+</li>
+</ul>
+</li><li class="level1 nav-1-2">
+<a href="http://www.cooking-hacks.com/index.php/shop/waspmote.html">
+<span>Waspmote</span>
+</a>
+</li><li class="level1 nav-1-3 parent">
+<a href="http://www.cooking-hacks.com/index.php/shop/raspberry-pi.html">
+<span>Raspberry Pi</span>
+</a>
+<ul class="level1">
+<li class="level2 nav-1-3-10 first">
+<a href="http://www.cooking-hacks.com/index.php/shop/raspberry-pi/starter-kit.html">
+<span>Starter Kits</span>
+</a>
+</li><li class="level2 nav-1-3-11 last">
+<a href="http://www.cooking-hacks.com/index.php/shop/raspberry-pi/shields.html">
+<span>Shields</span>
+</a>
+</li>
+</ul>
+</li><li class="level1 nav-1-4 parent">
+<a href="http://www.cooking-hacks.com/index.php/shop/sensors.html">
+<span>Sensors</span>
+</a>
+<ul class="level1">
+<li class="level2 nav-1-4-12 first">
+<a href="http://www.cooking-hacks.com/index.php/shop/sensors/e-health.html">
+<span>e-Health</span>
+</a>
+</li><li class="level2 nav-1-4-13">
+<a href="http://www.cooking-hacks.com/index.php/shop/sensors/motion.html">
+<span>Motion</span>
+</a>
+</li><li class="level2 nav-1-4-14">
+<a href="http://www.cooking-hacks.com/index.php/shop/sensors/gas.html">
+<span>Gas</span>
+</a>
+</li><li class="level2 nav-1-4-15">
+<a href="http://www.cooking-hacks.com/index.php/shop/sensors/infrared.html">
+<span>Infrared</span>
+</a>
+</li><li class="level2 nav-1-4-16">
+<a href="http://www.cooking-hacks.com/index.php/shop/sensors/proximity.html">
+<span>Proximity</span>
+</a>
+</li><li class="level2 nav-1-4-17 parent">
+<a href="http://www.cooking-hacks.com/index.php/shop/sensors/temperature.html">
+<span>Temp. &amp; Humi.</span>
+</a>
+<ul class="level2">
+<li class="level3 nav-1-4-17-1 first last">
+<a href="http://www.cooking-hacks.com/index.php/shop/sensors/temperature/humidity.html">
+<span>Humidity</span>
+</a>
+</li>
+</ul>
+</li><li class="level2 nav-1-4-18">
+<a href="http://www.cooking-hacks.com/index.php/shop/sensors/light.html">
+<span>Light</span>
+</a>
+</li><li class="level2 nav-1-4-19">
+<a href="http://www.cooking-hacks.com/index.php/shop/sensors/current.html">
+<span>Current</span>
+</a>
+</li><li class="level2 nav-1-4-20">
+<a href="http://www.cooking-hacks.com/index.php/shop/sensors/flow.html">
+<span>Flow</span>
+</a>
+</li><li class="level2 nav-1-4-21">
+<a href="http://www.cooking-hacks.com/index.php/shop/sensors/sound.html">
+<span>Sound</span>
+</a>
+</li><li class="level2 nav-1-4-22 last">
+<a href="http://www.cooking-hacks.com/index.php/shop/sensors/load-cell.html">
+<span>Load</span>
+</a>
+</li>
+</ul>
+</li><li class="level1 nav-1-5 parent">
+<a href="http://www.cooking-hacks.com/index.php/shop/actuators.html">
+<span>Actuators</span>
+</a>
+<ul class="level1">
+<li class="level2 nav-1-5-23 first parent">
+<a href="http://www.cooking-hacks.com/index.php/shop/actuators/buttons.html">
+<span>Buttons</span>
+</a>
+<ul class="level2">
+<li class="level3 nav-1-5-23-2 first last">
+<a href="http://www.cooking-hacks.com/index.php/shop/actuators/buttons/buttons.html">
+<span>Buttons</span>
+</a>
+</li>
+</ul>
+</li><li class="level2 nav-1-5-24">
+<a href="http://www.cooking-hacks.com/index.php/shop/actuators/relays.html">
+<span>Relays</span>
+</a>
+</li><li class="level2 nav-1-5-25">
+<a href="http://www.cooking-hacks.com/index.php/shop/actuators/laser.html">
+<span>Laser</span>
+</a>
+</li><li class="level2 nav-1-5-26">
+<a href="http://www.cooking-hacks.com/index.php/shop/actuators/solenoids-1.html">
+<span>Solenoids</span>
+</a>
+</li><li class="level2 nav-1-5-27 last">
+<a href="http://www.cooking-hacks.com/index.php/shop/actuators/misc.html">
+<span>Miscellaneous</span>
+</a>
+</li>
+</ul>
+</li><li class="level1 nav-1-6 parent">
+<a href="http://www.cooking-hacks.com/index.php/shop/wireless.html">
+<span>Wireless</span>
+</a>
+<ul class="level1">
+<li class="level2 nav-1-6-28 first">
+<a href="http://www.cooking-hacks.com/index.php/shop/wireless/bluetooth.html">
+<span>Bluetooth</span>
+</a>
+</li><li class="level2 nav-1-6-29">
+<a href="http://www.cooking-hacks.com/index.php/shop/wireless/rfid.html">
+<span>RFID</span>
+</a>
+</li><li class="level2 nav-1-6-30">
+<a href="http://www.cooking-hacks.com/index.php/shop/wireless/802-15-4-zigbee.html">
+<span>802.15.4 / ZigBee</span>
+</a>
+</li><li class="level2 nav-1-6-31">
+<a href="http://www.cooking-hacks.com/index.php/shop/wireless/gsm-gprs.html">
+<span>GSM / GPRS</span>
+</a>
+</li><li class="level2 nav-1-6-32">
+<a href="http://www.cooking-hacks.com/index.php/shop/wireless/gps.html">
+<span>GPS</span>
+</a>
+</li><li class="level2 nav-1-6-33">
+<a href="http://www.cooking-hacks.com/index.php/shop/wireless/wifi.html">
+<span>WiFi</span>
+</a>
+</li><li class="level2 nav-1-6-34">
+<a href="http://www.cooking-hacks.com/index.php/shop/wireless/rf.html">
+<span>RF</span>
+</a>
+</li><li class="level2 nav-1-6-35 last">
+<a href="http://www.cooking-hacks.com/index.php/shop/wireless/antennas.html">
+<span>Antennas</span>
+</a>
+</li>
+</ul>
+</li><li class="level1 nav-1-7 parent">
+<a href="http://www.cooking-hacks.com/index.php/shop/shields.html">
+<span>DevTools</span>
+</a>
+<ul class="level1">
+<li class="level2 nav-1-7-36 first">
+<a href="http://www.cooking-hacks.com/index.php/shop/shields/arm.html">
+<span>ARM</span>
+</a>
+</li><li class="level2 nav-1-7-37">
+<a href="http://www.cooking-hacks.com/index.php/shop/shields/arduino.html">
+<span>Arduino</span>
+</a>
+</li><li class="level2 nav-1-7-38">
+<a href="http://www.cooking-hacks.com/index.php/shop/shields/avr.html">
+<span>AVR</span>
+</a>
+</li><li class="level2 nav-1-7-39">
+<a href="http://www.cooking-hacks.com/index.php/shop/shields/net.html">
+<span>.NET</span>
+</a>
+</li><li class="level2 nav-1-7-40">
+<a href="http://www.cooking-hacks.com/index.php/shop/shields/breakout-boards.html">
+<span>Breakout boards</span>
+</a>
+</li><li class="level2 nav-1-7-41">
+<a href="http://www.cooking-hacks.com/index.php/shop/shields/pic.html">
+<span>PIC</span>
+</a>
+</li><li class="level2 nav-1-7-42">
+<a href="http://www.cooking-hacks.com/index.php/shop/shields/e-health.html">
+<span>e-Health</span>
+</a>
+</li><li class="level2 nav-1-7-43">
+<a href="http://www.cooking-hacks.com/index.php/shop/shields/e-textile.html">
+<span>E-Textile</span>
+</a>
+</li><li class="level2 nav-1-7-44">
+<a href="http://www.cooking-hacks.com/index.php/shop/shields/ipod-ipad-iphone.html">
+<span>iPad/iPhone</span>
+</a>
+</li><li class="level2 nav-1-7-45 parent">
+<a href="http://www.cooking-hacks.com/index.php/shop/shields/components-1.html">
+<span>Components</span>
+</a>
+<ul class="level2">
+<li class="level3 nav-1-7-45-3 first">
+<a href="http://www.cooking-hacks.com/index.php/shop/shields/components-1/components.html">
+<span>Components</span>
+</a>
+</li><li class="level3 nav-1-7-45-4">
+<a href="http://www.cooking-hacks.com/index.php/shop/shields/components-1/microcontrollers.html">
+<span>Microcontrollers</span>
+</a>
+</li><li class="level3 nav-1-7-45-5">
+<a href="http://www.cooking-hacks.com/index.php/shop/shields/components-1/resistors.html">
+<span>Resistors</span>
+</a>
+</li><li class="level3 nav-1-7-45-6">
+<a href="http://www.cooking-hacks.com/index.php/shop/shields/components-1/capacitors.html">
+<span>Capacitors</span>
+</a>
+</li><li class="level3 nav-1-7-45-7">
+<a href="http://www.cooking-hacks.com/index.php/shop/shields/components-1/breadboards.html">
+<span>Breadboards</span>
+</a>
+</li><li class="level3 nav-1-7-45-8">
+<a href="http://www.cooking-hacks.com/index.php/shop/shields/components-1/sockets.html">
+<span>Sockets</span>
+</a>
+</li><li class="level3 nav-1-7-45-9 last">
+<a href="http://www.cooking-hacks.com/index.php/shop/shields/components-1/misc.html">
+<span>Miscellaneous</span>
+</a>
+</li>
+</ul>
+</li><li class="level2 nav-1-7-46 last">
+<a href="http://www.cooking-hacks.com/index.php/shop/shields/connectors.html">
+<span>Connectors</span>
+</a>
+</li>
+</ul>
+</li><li class="level1 nav-1-8 parent">
+<a href="http://www.cooking-hacks.com/index.php/shop/robotics.html">
+<span>Robotics</span>
+</a>
+<ul class="level1">
+<li class="level2 nav-1-8-47 first">
+<a href="http://www.cooking-hacks.com/index.php/shop/robotics/drivers.html">
+<span>Drivers</span>
+</a>
+</li><li class="level2 nav-1-8-48">
+<a href="http://www.cooking-hacks.com/index.php/shop/robotics/motors.html">
+<span>Motors</span>
+</a>
+</li><li class="level2 nav-1-8-49">
+<a href="http://www.cooking-hacks.com/index.php/shop/robotics/mechanical.html">
+<span>Mechanical</span>
+</a>
+</li><li class="level2 nav-1-8-50 last">
+<a href="http://www.cooking-hacks.com/index.php/shop/robotics/servos.html">
+<span>Servos</span>
+</a>
+</li>
+</ul>
+</li><li class="level1 nav-1-9 parent">
+<a href="http://www.cooking-hacks.com/index.php/shop/accessories.html">
+<span>Accessories</span>
+</a>
+<ul class="level1">
+<li class="level2 nav-1-9-51 first">
+<a href="http://www.cooking-hacks.com/index.php/shop/accessories/cables.html">
+<span>Cables</span>
+</a>
+</li><li class="level2 nav-1-9-52">
+<a href="http://www.cooking-hacks.com/index.php/shop/accessories/antennas.html">
+<span>Antennas</span>
+</a>
+</li><li class="level2 nav-1-9-53">
+<a href="http://www.cooking-hacks.com/index.php/shop/accessories/displays.html">
+<span>Displays</span>
+</a>
+</li><li class="level2 nav-1-9-54">
+<a href="http://www.cooking-hacks.com/index.php/shop/accessories/led.html">
+<span>LED</span>
+</a>
+</li><li class="level2 nav-1-9-55">
+<a href="http://www.cooking-hacks.com/index.php/shop/accessories/rfid-tags.html">
+<span>RFID TAGs</span>
+</a>
+</li><li class="level2 nav-1-9-56">
+<a href="http://www.cooking-hacks.com/index.php/shop/accessories/programmers.html">
+<span>Programmers</span>
+</a>
+</li><li class="level2 nav-1-9-57">
+<a href="http://www.cooking-hacks.com/index.php/shop/accessories/converters.html">
+<span>Converters</span>
+</a>
+</li><li class="level2 nav-1-9-58">
+<a href="http://www.cooking-hacks.com/index.php/shop/accessories/misc.html">
+<span>Miscellaneous</span>
+</a>
+</li><li class="level2 nav-1-9-59 last parent">
+<a href="http://www.cooking-hacks.com/index.php/shop/accessories/power.html">
+<span>Power</span>
+</a>
+<ul class="level2">
+<li class="level3 nav-1-9-59-10 first">
+<a href="http://www.cooking-hacks.com/index.php/shop/accessories/power/batteries.html">
+<span>Batteries</span>
+</a>
+</li><li class="level3 nav-1-9-59-11">
+<a href="http://www.cooking-hacks.com/index.php/shop/accessories/power/solar-panels.html">
+<span>Solar Panels</span>
+</a>
+</li><li class="level3 nav-1-9-59-12 last">
+<a href="http://www.cooking-hacks.com/index.php/shop/accessories/power/power-supply.html">
+<span>Power Supply</span>
+</a>
+</li>
+</ul>
+</li>
+</ul>
+</li><li class="level1 nav-1-10 parent">
+<a href="http://www.cooking-hacks.com/index.php/shop/lab-tools.html">
+<span>Tools</span>
+</a>
+<ul class="level1">
+<li class="level2 nav-1-10-60 first">
+<a href="http://www.cooking-hacks.com/index.php/shop/lab-tools/soldering.html">
+<span>Soldering</span>
+</a>
+</li><li class="level2 nav-1-10-61">
+<a href="http://www.cooking-hacks.com/index.php/shop/lab-tools/hand-tools.html">
+<span>Hand Tools</span>
+</a>
+</li><li class="level2 nav-1-10-62 last">
+<a href="http://www.cooking-hacks.com/index.php/shop/lab-tools/prototyping.html">
+<span>Prototyping</span>
+</a>
+</li>
+</ul>
+</li><li class="level1 nav-1-11 last">
+<a href="http://www.cooking-hacks.com/index.php/shop/on-demand-products.html">
+<span>On Demand</span>
+</a>
+</li>
+</ul>
+</li><li class="level0 nav-2 level-top parent">
+<a href="http://www.cooking-hacks.com/index.php/documentation.html" class="level-top">
+<span>Tutorials</span>
+</a>
+<ul class="level0">
+<li class="level1 nav-2-1 first">
+<a href="http://www.cooking-hacks.com/index.php/documentation/tutorials.html">
+<span>Arduino Guides</span>
+</a>
+</li><li class="level1 nav-2-2">
+<a href="http://www.cooking-hacks.com/index.php/documentation/raspberry-tutorials.html">
+<span>Raspberry Pi Guides</span>
+</a>
+</li><li class="level1 nav-2-3 last">
+<a href="http://www.cooking-hacks.com/index.php/documentation/video-tutorials.html">
+<span>Videos</span>
+</a>
+</li>
+</ul>
+</li><li class="level0 nav-3 level-top parent">
+<a href="http://www.cooking-hacks.com/index.php/let-s-cook.html" class="level-top">
+<span>Let's Cook!</span>
+</a>
+<ul class="level0">
+<li class="level1 nav-3-1 first">
+<a href="http://www.cooking-hacks.com/index.php/let-s-cook/community-hacks.html">
+<span>Community Hacks</span>
+</a>
+</li><li class="level1 nav-3-2 last">
+<a href="http://www.cooking-hacks.com/index.php/let-s-cook/send-us-your-recipe.html">
+<span>Send us your recipe</span>
+</a>
+</li>
+</ul>
+</li><li class="level0 nav-4 level-top">
+<a href="http://www.cooking-hacks.com/index.php/forum.html" class="level-top">
+<span>Forum</span>
+</a>
+</li><li class="level0 nav-5 level-top">
+<a href="http://www.cooking-hacks.com/index.php/customer-service.html" class="level-top">
+<span>Customer Service</span>
+</a>
+</li><li class="level0 nav-6 level-top">
+<a href="http://www.cooking-hacks.com/index.php/distributors.html" class="level-top">
+<span>Distributors</span>
+</a>
+</li><li class="level0 nav-7 level-top">
+<a href="http://www.cooking-hacks.com/index.php/manifesto.html" class="level-top">
+<span>Manifesto</span>
+</a>
+</li><li class="level0 nav-8 level-top last">
+<a href="http://www.cooking-hacks.com/index.php/blog-cooking-hacks.html" class="level-top">
+<span>Blog</span>
+</a>
+</li>    </ul>
+</div>
+<p>
+  </p><div id="shop_horizontal_container">
+    <div class="shop_horizontal">
+      <ul>
+        <li>
+        <a href="http://www.cooking-hacks.com/index.php/shop/arduino.html">Arduino</a>
+        </li>
+        <li>
+        <a href="http://www.cooking-hacks.com/index.php/shop/waspmote.html">Waspmote</a>
+        </li>
+        <li>
+        <a href="http://www.cooking-hacks.com/index.php/shop/raspberry-pi.html">Raspberry Pi</a>
+        </li>
+        <li>
+        <a href="http://www.cooking-hacks.com/index.php/shop/sensors.html">Sensors</a>
+        </li>
+        <li>
+        <a href="http://www.cooking-hacks.com/index.php/shop/actuators.html">Actuators</a>
+        </li>
+        <li>
+        <a href="http://www.cooking-hacks.com/index.php/shop/wireless.html">Wireless</a>
+        </li>
+        <li>
+        <a href="http://www.cooking-hacks.com/index.php/shop/shields.html">DevTools</a>
+        </li>
+        <li>
+        <a href="http://www.cooking-hacks.com/index.php/shop/robotics.html">Robotics</a>
+        </li>
+        <li>
+        <a href="http://www.cooking-hacks.com/index.php/shop/accessories.html">Accessories</a>
+        </li>
+        <li>
+        <a href="http://www.cooking-hacks.com/index.php/shop/lab-tools.html">Tools</a>
+        </li>
+        <li>
+        <a href="http://www.cooking-hacks.com/index.php/shop/on-demand-products.html">On Demand</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div id="shop_horizontal_container_3er_nivel">
+    <div class="shop_horizontal">
+      <ul>
+        <li>
+          <a href="http://www.cooking-hacks.com/index.php/shop/arduino/starter-kits.html">Starter Kits</a>
+        </li>
+        <li>
+          <a href="http://www.cooking-hacks.com/index.php/shop/arduino/shields.html">Shields</a>
+        </li>
+        <li>
+          <a href="http://www.cooking-hacks.com/index.php/shop/arduino/wireless.html">Wireless</a>
+        </li>
+        <li>
+          <a href="http://www.cooking-hacks.com/index.php/shop/arduino/packs.html">Packs</a>
+        </li>
+        <li>
+          <a href="http://www.cooking-hacks.com/index.php/shop/arduino/enclosures.html">Enclosures</a>
+        </li>
+        <li>
+          <a href="http://www.cooking-hacks.com/index.php/shop/arduino/prototyping.html">Prototyping</a>
+        </li>
+        <li>
+          <a href="http://www.cooking-hacks.com/index.php/shop/arduino/converters.html">Converters</a>
+        </li>
+        <li>
+          <a href="http://www.cooking-hacks.com/index.php/shop/arduino/books.html">Books</a>
+        </li>
+        <li>
+          <a href="http://www.cooking-hacks.com/index.php/shop/arduino/exclusive-products.html">Exclusive Products</a>
+        </li>
+      </ul>
+    </div>
+  </div><p></p>        <div class="main-container col2-right-layout">
+            <div class="main">
+                <div class="breadcrumbs">
+    <ul>
+                    <li class="home">
+                            <a href="http://www.cooking-hacks.com/index.php/" title="Go to Home Page">Home</a>
+                                        <span>/ </span>
+                        </li>
+                    <li class="cms_page">
+                            <strong>Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge</strong>
+                                    </li>
+            </ul>
+</div>
+                <div class="col-main">
+                                        <div class="std"><!-- TITTLE -->
+<div class="titulo_cms">
+<h1>Raspberry Pi to Arduino shields connection bridge</h1>
+</div>
+<div class="texto_cms"><!-- INTRODUCTION -->
+<style><!--
+	.mitd { border:1px solid lightgray !important;  text-align:center !important; background-color:white; }
+--></style>
+<img src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/raspberry_and_shield.png" border="0" alt="raspberry_arduino_shield" style="width: auto !important;"><br>
+<p>The idea behind the Raspberry Pi to Arduino shields connection bridge is to allow to use any of the shields, boards and modules designed for Arduino in Raspberry Pi. It includes also the possibility of connecting digital and analog sensors, using the same pinout of Arduino but with the power and capabilities of Raspberry.</p>
+<p>In order to make complete the compatibility we have created the <strong>arduPi</strong> library which allows to use Raspberry with the same code used in Arduino. To do so, we have implemented conversion functions so that you can control in the same way as in Arduino all the I/O interfaces: <strong>i2C</strong>, <strong>SPI</strong>, <strong>UART</strong>, <strong>analog</strong>, <strong>digital</strong>, in Raspberry Pi.</p>
+<p>Let's summarize what we can do using this shield along with the arduPi library:</p>
+<ul>
+<li>Connect any Arduino Wireless module in Raspberry. Some examples: <a href="http://www.cooking-hacks.com/index.php/documentation/tutorials/raspberry-pi-xbee">XBee 802.15.4/XBee ZigBee</a>, <a href="http://www.cooking-hacks.com/index.php/documentation/tutorials/raspberry-pi-rfid">RFID</a>, <a href="http://www.cooking-hacks.com/index.php/documentation/tutorials/rfid-13-56-mhz-nfc-module-for-raspberry-pi">NFC</a>, <a href="http://www.cooking-hacks.com/index.php/documentation/tutorials/raspberry-pi-bluetooth">Bluetooth</a>, <a href="http://www.cooking-hacks.com/index.php/documentation/tutorials/bluetooth-module-pro-for-raspberry-pi">Bluetooth Pro</a>, <a href="http://www.cooking-hacks.com/index.php/documentation/tutorials/wifi-module-for-raspberry-pi-roving-rn-xvee">Wifi</a>, <a href="http://www.cooking-hacks.com/index.php/documentation/tutorials/raspberry-pi-gprs-gsm-quadband-sim900">GPRS</a>, <a href="http://www.cooking-hacks.com/index.php/documentation/tutorials/raspberry-pi-3g-gprs-gsm-gps">3G</a> </li>
+<li>Connect any sensor (analog 0-5V, digital) to Raspberry Pi with a precession of 16b using the ADC integrated. Connect also complex sensors through i2C and UART buses</li>
+<li>Connect any Arduino specific shield such as: <a href="http://www.cooking-hacks.com/index.php/documentation/tutorials/geiger-counter-raspberry-pi-radiation-sensor-board">Radiation sensor shield</a>, <a href="http://www.cooking-hacks.com/index.php/http://www.cooking-hacks.com/index.php/can-bus-shield.html">CanBus</a>, <a href="http://www.cooking-hacks.com/index.php/http://www.cooking-hacks.com/index.php/relay-shield.html">Relay shield</a>,...</li>
+<li>Connect any electronic module or actuator which works over i2C, SPI, UART</li>
+<img src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/raspberry_arduino_shield.png" border="0" alt="raspberry_arduino_shield" style="width: auto !important; border: 0px;">
+<div class="notas_fondo" style="margin-top: 20px;">
+<p><span class="content" style="text-decoration: underline;">NOTE:</span> If you are searching for <a href="http://www.sensor-networks.org/">Wireless Sensor Networks </a>devices (motes) you may be interested in our ready to market sensor platform: <a href="http://www.libelium.com/waspmote">Waspmote</a>.</p>
+</div>
+<div class="texto_cms"><!-- CONTENTS --> <!-- STEPS INDEX -->
+<h2>Article Index</h2>
+<ul style="margin-top: 10px;">
+<li><a href="http://www.cooking-hacks.com/index.php/documentation/tutorials/raspberry-pi-to-arduino-shields-connection-bridge?utm_source=banner_raspberry#step1">1. The Shield</a></li>
+<li><a href="http://www.cooking-hacks.com/index.php/documentation/tutorials/raspberry-pi-to-arduino-shields-connection-bridge?utm_source=banner_raspberry#step2">2. Modules and shields for Raspberry Pi</a></li>
+<li><a href="http://www.cooking-hacks.com/index.php/documentation/tutorials/raspberry-pi-to-arduino-shields-connection-bridge?utm_source=banner_raspberry#step3">3. Raspberry Pi revisions</a></li>
+<li><a href="http://www.cooking-hacks.com/index.php/documentation/tutorials/raspberry-pi-to-arduino-shields-connection-bridge?utm_source=banner_raspberry#step4">4. The Library: arduPi</a></li>
+<li><a href="http://www.cooking-hacks.com/index.php/documentation/tutorials/raspberry-pi-to-arduino-shields-connection-bridge?utm_source=banner_raspberry#step5">5. Basic circuits</a></li>
+<li><a href="http://www.cooking-hacks.com/index.php/documentation/tutorials/raspberry-pi-to-arduino-shields-connection-bridge?utm_source=banner_raspberry#step6">6. ADC</a></li>
+<li><a href="http://www.cooking-hacks.com/index.php/documentation/tutorials/raspberry-pi-to-arduino-shields-connection-bridge?utm_source=banner_raspberry#step7">7. UART</a></li>
+<li><a href="http://www.cooking-hacks.com/index.php/documentation/tutorials/raspberry-pi-to-arduino-shields-connection-bridge?utm_source=banner_raspberry#step8">8. i2C</a></li>
+<li><a href="http://www.cooking-hacks.com/index.php/documentation/tutorials/raspberry-pi-to-arduino-shields-connection-bridge?utm_source=banner_raspberry#step9">9. SPI</a></li>
+<li><a href="http://www.cooking-hacks.com/index.php/documentation/tutorials/raspberry-pi-to-arduino-shields-connection-bridge?utm_source=banner_raspberry#step10">10. Support</a></li>
+<li><a href="http://www.cooking-hacks.com/index.php/documentation/tutorials/raspberry-pi-to-arduino-shields-connection-bridge?utm_source=banner_raspberry#step11">11. Get the shield and kits</a></li>
+</ul>
+<!-- STEP 1 -->
+<h2><a name="step1" class="ancla">1. The Shield.</a></h2>
+<ul style="margin-top: 10px;">
+<li>8 Digital pins.</li>
+<li>Socket for wireless modules.</li>
+<li>RX/TX pins.</li>
+<li>i2C pins (SDA, SCL).</li>
+<li>SPI pins (SCK, MISO, MOSI, CS). Can be used also as GPIO.</li>
+<li>8 channel analog to digital converter.</li>
+<li>Switch to enable external power supply.</li>
+</ul>
+<p><img src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/front.png" border="0" alt="top" style="width: auto; margin-left: 50px; border: 0px;"> <img src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/back.png" border="0" alt="bottom" style="width: 500px; margin-left: 60px; border: 0px;"></p>
+<p>Get the schematics <a href="http://www.cooking-hacks.com/skin/frontend/default/cooking/images/catalog/documentation/raspberry_arduino_shield/arduino2raspberryPi_sch.pdf">here</a></p>
+<p>Get the Raspberry Pi to Arduino shields connection bridge<a href="http://www.cooking-hacks.com/index.php/Raspberry-pi-to-arduino-shield-connection-bridge.html"> here</a>.</p>
+<!-- STEP 2 -->
+<h2><a name="step2" class="ancla">2. Modules and shields for Raspberry Pi.</a></h2>
+<ul style="margin-top: 20px;">
+<li><a href="http://www.cooking-hacks.com/index.php/shop/raspberry-pi/raspberry-pi-to-arduino-shield-connection-bridge.html">Raspberry Pi to Arduino shields connection bridge</a></li>
+<li><a href="http://www.cooking-hacks.com/index.php/documentation/tutorials/raspberry-pi-gprs-gsm-quadband-sim900">GPRS/GSM Quadband Shield for Raspberry Pi [Tutorial]</a></li>
+<li><a href="http://www.cooking-hacks.com/index.php/documentation/tutorials/raspberry-pi-3g-gprs-gsm-gps">3G + GPS Shield for Raspberry Pi [Tutorial]</a></li>
+<li><a href="http://www.cooking-hacks.com/index.php/documentation/tutorials/rfid-13-56-mhz-nfc-module-for-raspberry-pi">RFID 13.56 MHz/NFC shield for Raspberry Pi [Tutorial]</a></li>
+<li><a href="http://www.cooking-hacks.com/index.php/documentation/tutorials/raspberry-pi-rfid">RFID 125 KHz shield for Raspberry Pi [Tutorial]</a></li>
+<li><a href="http://www.cooking-hacks.com/index.php/documentation/tutorials/wifi-module-for-raspberry-pi-roving-rn-xvee">Wifi Module 'Roving RN-XV shield for Raspberry Pi' [Tutorial]</a></li>
+<li><a href="http://www.cooking-hacks.com/index.php/documentation/tutorials/raspberry-pi-xbee">XBee shield (802.15.4 / ZigBee) for Raspberry Pi [Tutorial]</a></li>
+<li><a href="http://www.cooking-hacks.com/index.php/documentation/tutorials/raspberry-pi-bluetooth">Bluetooth shield for Raspberry Pi [Tutorial]</a></li>
+<li><a href="http://www.cooking-hacks.com/index.php/documentation/tutorials/bluetooth-module-pro-for-raspberry-pi">Bluetooth PRO shield for Raspberry Pi [Tutorial]</a></li>
+<li><a href="http://www.cooking-hacks.com/index.php/documentation/tutorials/raspberry-pi-gps">GPS module shield for Raspberry Pi [Tutorial]</a></li>
+<li><a href="http://www.cooking-hacks.com/index.php/documentation/tutorials/geiger-counter-raspberry-pi-radiation-sensor-board">Geiger Counter - Radiation Sensor Board for Raspberry Pi [Tutorial]</a></li>
+</ul>
+<br>
+<p>&nbsp;</p>
+<table style="border: 0px; width: 100%;">
+<tbody>
+<tr>
+<td class="mitd"><a href="http://www.cooking-hacks.com/index.php/documentation/tutorials/raspberry-pi-gprs-gsm-quadband-sim900">GPRS/GSM Quadband Shield for Raspberry Pi<br> <img src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/raspberry_arduino_shield_gprs_gsm__small.png" border="0" alt="gprs_quadband_module" style="height: auto !important; width: 300px; border: 0px;"></a></td>
+<td class="mitd"><a href="http://www.cooking-hacks.com/index.php/documentation/tutorials/raspberry-pi-3g-gprs-gsm-gps">3G + GPS Shield for Raspberry Pi<br> <img src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/raspberry_3g__small.png" border="0" alt="Raspberry Pi 3G Shield" style="height: auto !important; width: 300px; border: 0px;"></a></td>
+</tr>
+<tr>
+<td class="mitd"><a href="http://www.cooking-hacks.com/index.php/documentation/tutorials/rfid-13-56-mhz-nfc-module-for-raspberry-pi">RFID 13.56 MHz/NFC Shield for Raspberry Pi<br> <img src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/raspberry_rfid__small.png" border="0" alt="RFID 13.56 MHz/NFC Module" style="height: auto !important; width: 300px; border: 0px;"></a></td>
+<td class="mitd"><a href="http://www.cooking-hacks.com/index.php/documentation/tutorials/raspberry-pi-rfid">RFID 125 KHz shield for Raspberry Pi<br> <img src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/raspberry_rfid_125_small.png" border="0" alt="rfid" style="height: auto !important; width: 300px; border: 0px;"></a></td>
+</tr>
+<tr>
+<td class="mitd"><a href="http://www.cooking-hacks.com/index.php/documentation/tutorials/wifi-module-for-raspberry-pi-roving-rn-xvee">Wifi Module 'Roving RN-XV' shield for Raspberry Pi<br> <img src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/raspberry_wifi__small.png" border="0" alt="Wifi Module &#39;Roving RN-XV&#39;" style="height: auto !important; width: 300px; border: 0px;"></a></td>
+<td class="mitd"><a href="http://www.cooking-hacks.com/index.php/documentation/tutorials/raspberry-pi-xbee">XBee shield for Raspberry Pi<br> <img src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/raspberry_xbee_small.png" border="0" alt="xbee_shield" style="height: auto !important; width: 300px; border: 0px;"></a></td>
+</tr>
+<tr>
+<td class="mitd"><a href="http://www.cooking-hacks.com/index.php/documentation/tutorials/raspberry-pi-bluetooth">Bluetooth shield for Raspberry Pi<br> <img src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/rasbperry_shield_bluetooth_b__small.png" border="0" alt="bluetooth_module" style="height: auto !important; width: 300px; border: 0px;"></a></td>
+<td class="mitd"><a href="http://www.cooking-hacks.com/index.php/documentation/tutorials/bluetooth-module-pro-for-raspberry-pi">Bluetooth PRO shield for Raspberry Pi<br> <img src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/raspberry_bt_pro_small.png" border="0" alt="Bluetooth PRO" style="height: auto !important; width: 300px; border: 0px;"></a></td>
+</tr>
+<tr>
+<td class="mitd"><a href="http://www.cooking-hacks.com/index.php/documentation/tutorials/raspberry-pi-gps">GPS shield for Raspberry Pi<br> <img src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/raspberry_gps_small.png" border="0" alt="gps" style="height: auto !important; width: 300px; border: 0px;"></a></td>
+<td class="mitd"><a href="http://www.cooking-hacks.com/index.php/documentation/tutorials/geiger-counter-raspberry-pi-radiation-sensor-board">Geiger Counter - Radiation Sensor Board for Raspberry Pi<br> <img src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/raspberry_radiation__small.png" border="0" alt="arduino_geiger_board" style="height: auto !important; width: 300px; border: 0px;"></a></td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<!-- STEP 3 -->
+<h2><a name="step3" class="ancla">3. Raspberry Pi revisions.</a></h2>
+There are currently two main Raspberry Pi board revisions.<br> 
+<ul>
+<li>Raspberry Pi Revision 1.0</li>
+<li>Raspberry Pi Revision 2.0</li>
+</ul>
+<p>There are slight differences between this two revisions, so a different version of the arduPi library should be used depending of which board revision are you using.</p>
+In the revision 2.0 the main changes are:            
+<ul>
+<li>2 mounting holes added</li>
+<li>2 pin “reset” header added. Labelled P6</li>
+<li>GPIO21 was replaced with GPIO27 on the main GPIO header, P1</li>
+<li>i2c interfaces has been swapped</li>
+<li>Resetable polyfuses were removed</li>
+<li>Additional header P5 was added. This made GPIO28, 29, 30 and 31 available as well as providing +5V, +3V3 and two Ground pins</li>
+</ul>
+<h4>3.1 Identifying your board revision</h4>
+Cooking hacks <a href="http://www.cooking-hacks.com/index.php/shop/raspberry-pi/starter-kit.html">starter kits</a> include the Revision 2.0 of the board.<br>
+<p><span class="content" style="text-decoration: underline;">Revision 2.0</span></p>
+The easiest way to identify your board revision is to check if it has the <strong> 2 mounting holes </strong>. If this is the case you have the revision 2.0.
+<p>&nbsp;</p>
+<img src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/rasp_rev2.png" border="0" style="width: 500px !important; height: auto !important;">
+<p>&nbsp;</p>
+Revision 2.0 can be identified also checking if:           
+<ul>
+<li>“P5″ header is present on the underside just below the 26 way P1 header.</li>
+<li>“Made in the UK” is printed on the board.</li>
+</ul>
+<p><span class="content" style="text-decoration: underline;">Revision 1.0</span></p>
+If none of the previous characteristics is present in your board then you have Revision 1.0.
+<p>&nbsp;</p>
+<img src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/rasp_rev1.png" border="0" style="width: 500px !important; height: auto !important;">
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<!-- STEP 4 -->
+<h2><a name="step4" class="ancla">4. The library: arduPi.</a></h2>
+<p><strong>arduPi</strong> is a C++ library that lets you write programs for Raspberry Pi as if you were writing an arduino program. All the functions in order to control Serial port communications, i2C, SPI and GPIO pins are available using the arduino syntax.</p>
+<p>arduPi has been tested in a <a href="http://www.raspbian.org/">Raspbian distribution</a>. In order to write a Raspbian image to the SD card you can follow <a href="http://elinux.org/RPi_Easy_SD_Card_Setup">this instructions</a>.</p>
+<div style="margin-left: 20px;"><strong>General Arduino functions:</strong><br> 
+<ul>
+<li>delay()</li>
+<li>delayMicroseconds()</li>
+<li>pinMode()</li>
+<li>digitalWrite()</li>
+<li>digitalRead()</li>
+<li>analogRead() (On pins from A0 to A7. Example: analogRead(5) will read from A5)</li>
+<li>shiftIn()</li>
+<li>shiftOut()</li>
+<li>attachInterrupt() <span style="color: #ff0000;">*</span></li>
+<li>detachInterrupt()</li>
+</ul>
+<p>[<span style="color: #ff0000;">*</span>] We can detect RISING and FALLING interrupts. Any digital pin (from 2 to 13) can be used in attachInterrupt(). So for example if we want to be aware of RISING events on pin 6 we can do attachInterrupt(6,function_to_call,RISING).</p>
+<a href="http://arduino.cc/en/Reference/serial">Serial Library:</a> 
+<ul>
+<li>available()</li>
+<li>begin()</li>
+<li>end()</li>
+<li>flush()</li>
+<li>peek()</li>
+<li>print()</li>
+<li>println()</li>
+<li>read()</li>
+<li>readBytes()</li>
+<li>readBytesUntil()</li>
+<li>find()</li>
+<li>findUntil()</li>
+<li>parseInt()</li>
+<li>parseFloat()</li>
+<li>setTimeout()</li>
+<li>write()</li>
+</ul>
+<br> <a href="http://arduino.cc/en/Reference/Wire">Wire Library:</a> 
+<ul>
+<li>begin()</li>
+<li>requestFrom()</li>
+<li>beginTransmission()</li>
+<li>endTransmission()</li>
+<li>write()</li>
+<li>read()</li>
+</ul>
+<br> <a href="http://arduino.cc/en/Reference/SPI">SPI Library:</a> 
+<ul>
+<li>begin() </li>
+<li>end() </li>
+<li>setBitOrder() </li>
+<li>setClockDivider()</li>
+<li>setDataMode()</li>
+<li>transfer()</li>
+</ul>
+</div>
+<br>
+<h4>4.1 Using arduPi library:</h4>
+<p>You can find the library (v1.4) <a href="http://www.cooking-hacks.com/skin/frontend/default/cooking/images/catalog/documentation/raspberry_arduino_shield/arduPi_1-4.tar.gz">here</a>.<br> You can find a changelog <a href="http://www.cooking-hacks.com/skin/frontend/default/cooking/images/catalog/documentation/raspberry_arduino_shield/arduPi_changelog.txt">here</a>.</p>
+In the library folder you will find 3 files: arduPi.cpp, arduPi.h and arduPi_template.cpp<br> The <span style="font-weight: bold;">arduPi_template.cpp</span> file is meant to be used as a starting point to create programs with the same behaviour as an arduino program.
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+Here you can see the template code:
+<p>&nbsp;</p>
+<div class="codigo"><a href="http://www.cooking-hacks.com/index.php/documentation/tutorials/raspberry-pi-to-arduino-shields-connection-bridge?utm_source=banner_raspberry#">Show Code</a>
+<pre class="codigo_plegado">//Include arduPi library
+#include "arduPi.h"
+
+/*********************************************************
+ *  IF YOUR ARDUINO CODE HAS OTHER FUNCTIONS APART FROM  *
+ *  setup() AND loop() YOU MUST DECLARE THEM HERE        *
+ * *******************************************************/
+
+/**************************
+ * YOUR ARDUINO CODE HERE *
+ * ************************/
+
+int main (){
+	setup();
+	while(1){
+		loop();
+	}
+	return (0);
+}
+</pre>
+</div>
+<p>As you can see in the main() function the setup() function is called once and then the loop() function is called continiously until the program is forced to finish.<br> Either if you are starting to write a new program, or if you have an arduino program written that uses the ported functions you can use the template (ardupi_template.cpp) and put your arduino code where it says: YOUR ARDUINO CODE HERE. Remember that the program you are writing is a C++ program so all the C++ libraries can be used.<br><br></p>
+<h4>4.2 Enabling the UART port:</h4>
+<p>The following steps (based on a clean 2012-07-15-wheezy-raspbian install</p>
+<p>0. Open a terminal on the Raspberry, or connect to Raspberry Pi through SSH. <br><br> 1. Make a backup of the /boot/cmdline.txt file. <br> <span style="margin-left: 20px; font-weight: bold;">sudo cp /boot/cmdline.txt /boot/cmdline_backup.txt</span><br><br> 2. Edit /boot/cmdline.txt file: <br> <span style="margin-left: 20px; font-weight: bold;">sudo vi /boot/cmdline.txt</span><br><br> This file contains: <br> <span style="margin-left: 20px; font-weight: bold;">dwc_otg.lpm_enable=0 console=ttyAMA0,115200 kgdboc=ttyAMA0,115200 console=tty1 $</span><br><br> Remove the parameters that reference the UART serial port (ttyAMA0): <br> <span style="margin-left: 20px; font-weight: bold;"> dwc_otg.lpm_enable=0 console=tty1 $</span><br><br> 3. Comment next line in /etc/inittab: <br> <span style="margin-left: 20px; font-weight: bold;">T0:23:respawn:/sbin/getty -L ttyAMA0 115200 vt100</span><br><br> 4. Reboot Raspberry Pi <br> <span style="margin-left: 20px; font-weight: bold;">sudo reboot</span><br><br></p>
+<h4>3.3 Compile arduPi library:</h4>
+<p>(This step needs to be done on the Raspberry, or using cross-compiling tools for the raspberry in other machine).<br> As arduPi is a C++ library we will use g++ to compile it. You can compile the arduPi library to obtain an object file (.o) and use this file to link your program:<br> <span style="margin-left: 20px; font-weight: bold;">g++ -c arduPi.cpp -o arduPi.o</span></p>
+<br>
+<h4>4.4 Compile a program that uses arduPi:</h4>
+<p>(This step needs to be done on the raspberry, or using cross-compiling tools for the raspberry in other machine).<br> If you have already compiled the arduPi library (previous step) you can do:<br> <span style="margin-left: 20px; font-weight: bold;">g++ -lrt -lpthread my_program.cpp arduPi.o -o my_program</span><br> <br> If arduPi library is not compiled you can just compile both arduPi and your program and link them in one step: <br> <span style="margin-left: 20px; font-weight: bold;">g++ -lrt -lpthread my_program.cpp arduPi.cpp -o my_program</span><br><br> The <span style="font-weight: bold;">-lrt</span> flag is necesary because the library uses the function clock_gettime (time.h). <br><br>The <span style="font-weight: bold;">-lpthread</span> option is needed because attachInterrupt() and detachInterrupt() functions use threads.</p>
+<br>
+<h4>4.5 Running your program</h4>
+<p>For running your program you must have the right permissions in order to use GPIO (/dev/mem needs to be accessed in the raspberry). You can run your program with sudo:<br> <span style="margin-left: 20px; font-weight: bold;">sudo ./my_program</span></p>
+<p>&nbsp;</p>
+<!-- STEP 5 -->
+<h2><a name="step3" class="ancla">5. Basic circuits.</a></h2>
+<div class="notas_fondo" style="background-color: #ffcaca; margin-top: 20px; margin-bottom: 20px;">
+<p><span class="content" style="text-decoration: underline;">WARNING:</span> GPIO voltage levels are 3.3 V and are not 5 V tolerant. There is no over-voltage protection on the board. Digital inputs use a 3V3 logic level and are not tolerant of 5V levels, such as you might find on a 5V powered Arduino.<br> Extreme caution when working with GPIO, you may damage your Raspberry Pi, your equipment and potentially yourself and others. Doing so is at your own risk!</p>
+</div>
+More information:<br> <a href="http://elinux.org/RPi_Low-level_peripherals" target="_blank">http://elinux.org/RPi_Low-level_peripherals</a><br> <a href="http://elinux.org/RPi_Tutorial_EGHS:GPIO_Protection_Circuits" target="_blank">http://elinux.org/RPi_Tutorial_EGHS:GPIO_Protection_Circuits</a><br>
+<h4>5.1 GPIO Input</h4>
+GPIO peripherals vary quite widely. In some cases, they are very simple, a group of pins that can be switched as a group to either input or output. The input and output voltages are typically, though not universally limited to the supply voltage of the device with the GPIOs on, and may be damaged by greater voltages.<br> Some GPIOs have 5 V tolerant inputs: even on low supply voltages, the device can accept 5V without damage.<br> For Raspberry Pi, we present an examples of how to adapt the voltage level of a 5V sensor measure to prevent possible damage. <br> Components for this examples and voltage adaptation circuit can be founded in the <a href="http://www.cooking-hacks.com/index.php/starter-kit-for-raspberry-pi-a-v-edition.html" target="_blank">Starter Kit for Raspberry Pi (A/V Edition)</a> <br> When a GPIO pin is set as an input with a basic push button example, we can have these voltages incompatibility problems. <br> <img src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/wrong.png" border="0" style="width: auto !important; height: auto !important;"> This circuit is wrong because when you press the button the GPIO input is connected to 5 volts, so our device may be damaged.<br> <img src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/right.png" border="0" style="width: auto !important; height: auto !important;"> However, this can be avoided by simply using a resistor in the push-button cable. The value of the resistor is determined by the leakage current of the GPIO pin (the current used by the circuit to read the pin) and the amount of voltage drop it creates as a result.  With the 5K resistor we obtain 3.3V in the GPIO input.<br>
+<p>Vgpio = 5V·(10K/(10K+5K)) = 3.3V</p>
+<h4>5.2 GPIO Sensor measurement</h4>
+We will have the same problem if we use a sensor operating at 5 volts.<br> Here is an example using a PIR sensor.<br> As shown in the image, we use the same resistive divider used to adapt voltage level.<br> <img src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/pir.jpg" border="0" style="width: auto !important; height: auto !important;"> <!-- STEP 6 -->
+<h2><a name="step6" class="ancla">6. ADC.</a></h2>
+<p>The shield includes an ADC of 16b of resolution which allows to connect any sensor to Raspberry with higher precision that Arduino does. The communication between Raspberry and the ADC of the shield is made via i2C.<br> The information of each channel can be obtained reading two bytes from i2C, but previously one byte (corresponding to the channel address) should be send through i2C depending of the channel we want to select. Here is a list with the channel addresses:</p>
+<table>
+<tbody>
+<tr>
+<td><span style="font-weight: bold;">Channel</span></td>
+<td><span style="font-weight: bold;">Adress</span></td>
+</tr>
+<tr>
+<td>0</td>
+<td>0xDC</td>
+</tr>
+<tr>
+<td>1</td>
+<td>0x9C</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0xCC</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0x8C</td>
+</tr>
+<tr>
+<td>4</td>
+<td>0xAC</td>
+</tr>
+<tr>
+<td>5</td>
+<td>0xEC</td>
+</tr>
+<tr>
+<td>6</td>
+<td>0xBC</td>
+</tr>
+<tr>
+<td>7</td>
+<td>0xFC</td>
+</tr>
+</tbody>
+</table>
+<p>Here is an example of a program that reads every channel continuously waiting 5 seconds between iterations.<br> With a wire connecting the 5V pin with some of the pins of the ADC a value near to 5.000000 should be read.</p>
+<p><span style="font-weight: bold;">All the examples on this guide use the arduPi library.</span></p>
+<div class="codigo"><a href="http://www.cooking-hacks.com/index.php/documentation/tutorials/raspberry-pi-to-arduino-shields-connection-bridge?utm_source=banner_raspberry#">Show Code</a>
+<pre class="codigo_plegado">/*
+*  Copyright (C) 2012 Libelium Comunicaciones Distribuidas S.L.
+*  http://www.libelium.com
+*
+*  This program is free software: you can redistribute it and/or modify
+*  it under the terms of the GNU General Public License as published by
+*  the Free Software Foundation, either version 3 of the License, or
+*  (at your option) any later version.
+*
+*  This program is distributed in the hope that it will be useful,
+*  but WITHOUT ANY WARRANTY; without even the implied warranty of
+*  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+*  GNU General Public License for more details.
+*
+*  You should have received a copy of the GNU General Public License
+*  along with this program.  If not, see .
+*
+*  Version 0.1
+*  Author: Anartz Nuin Jiménez
+*/
+
+
+//Include arduPi library 
+#include "arduPi.h" 
+
+byte val_0 = 0; 
+byte val_1 = 0; 
+byte address = 0x08; 
+
+int channel_0 = 0; 
+int channel_1 = 0; 
+int channel_2 = 0; 
+int channel_3 = 0; 
+int channel_4 = 0; 
+int channel_5 = 0; 
+int channel_6 = 0; 
+int channel_7 = 0; 
+
+float analog_0 = 0.0; 
+float analog_1 = 0.0; 
+float analog_2 = 0.0; 
+float analog_3 = 0.0; 
+float analog_4 = 0.0; 
+float analog_5 = 0.0; 
+float analog_6 = 0.0; 
+float analog_7 = 0.0; 
+
+void setup() 
+{ 
+  Wire.begin(); // join i2C bus (address optional for master) 
+} 
+
+void loop() 
+{ 
+  // channel 0 
+  Wire.beginTransmission(8); 
+  Wire.write(byte(0xDC));            
+  Wire.endTransmission();     
+  Wire.requestFrom(8,2); 
+   
+  val_0 = Wire.read();  // receive high byte (overwrites previous reading) 
+  val_1 = Wire.read(); 
+  channel_0 = int(val_0)*16 + int(val_1&gt;&gt;4); 
+  analog_0 = channel_0 * 5.0 / 4095.0; 
+  
+    
+  printf("Channel 0: digital value = %d", channel_0); 
+  printf(" analog value = %f\n", analog_0); 
+  
+  // channel 1 
+  Wire.beginTransmission(8); 
+  Wire.write(byte(0x9C));            
+  Wire.endTransmission();     
+  Wire.requestFrom(8,2); 
+   
+  val_0 = Wire.read();  // receive high byte (overwrites previous reading) 
+  val_1 = Wire.read(); 
+  channel_1 = int(val_0)*16 + int(val_1&gt;&gt;4); 
+  analog_1 = channel_1 * 5.0 / 4095.0; 
+  
+    
+  printf("Channel 1: digital value = %d", channel_1); 
+  printf(" analog value = %f\n", analog_1); 
+  
+  // channel 2 
+  Wire.beginTransmission(8); 
+  Wire.write(byte(0xCC));            
+  Wire.endTransmission();     
+  Wire.requestFrom(8,2); 
+   
+  val_0 = Wire.read();  // receive high byte (overwrites previous reading) 
+  val_1 = Wire.read(); 
+  channel_2 = int(val_0)*16 + int(val_1&gt;&gt;4); 
+  analog_2 = channel_2 * 5.0 / 4095.0; 
+  
+  printf("Channel 2: digital value = %d", channel_2); 
+  printf(" analog value = %f\n", analog_2); 
+  
+  // channel 3 
+  Wire.beginTransmission(8); 
+  Wire.write(byte(0x8C));            
+  Wire.endTransmission();     
+  Wire.requestFrom(8,2); 
+   
+  val_0 = Wire.read();  // receive high byte (overwrites previous reading) 
+  val_1 = Wire.read(); 
+  channel_3 = int(val_0)*16 + int(val_1&gt;&gt;4); 
+  analog_3 = channel_3 * 5.0 / 4095.0; 
+    
+  printf("Channel 3: digital value = %d", channel_3); 
+  printf(" analog value = %f\n", analog_3); 
+  
+  // channel 4 
+  Wire.beginTransmission(8); 
+  Wire.write(byte(0xAC));            
+  Wire.endTransmission();     
+  Wire.requestFrom(8,2); 
+   
+  val_0 = Wire.read();  // receive high byte (overwrites previous reading) 
+  val_1 = Wire.read(); 
+  channel_4 = int(val_0)*16 + int(val_1&gt;&gt;4); 
+  analog_4 = channel_4 * 5.0 / 4095.0; 
+  
+  printf("Channel 4: digital value = %d", channel_4); 
+  printf(" analog value = %f\n", analog_4); 
+  
+  // channel 5 
+  Wire.beginTransmission(8); 
+  Wire.write(byte(0xEC));            
+  Wire.endTransmission();     
+  Wire.requestFrom(8,2); 
+    
+  val_0 = Wire.read();  // receive high byte (overwrites previous reading) 
+  val_1 = Wire.read(); 
+  channel_5 = int(val_0)*16 + int(val_1&gt;&gt;4); 
+  analog_5 = channel_5 * 5.0 / 4095.0; 
+  
+  printf("Channel 5: digital value = %d", channel_5); 
+  printf(" analog value = %f\n", analog_5); 
+  
+  // channel 6 
+  Wire.beginTransmission(8); 
+  Wire.write(byte(0xBC));            
+  Wire.endTransmission();     
+  Wire.requestFrom(8,2); 
+   
+  val_0 = Wire.read();  // receive high byte (overwrites previous reading) 
+  val_1 = Wire.read(); 
+  channel_6 = int(val_0)*16 + int(val_1&gt;&gt;4); 
+  analog_6 = channel_6 * 5.0 / 4095.0; 
+  
+  printf("Channel 6: digital value = %d", channel_6); 
+  printf(" analog value = %f\n", analog_6); 
+  
+  // channel 7 
+  Wire.beginTransmission(8); 
+  Wire.write(byte(0xFC));            
+  Wire.endTransmission();     
+  Wire.requestFrom(8,2); 
+   
+  val_0 = Wire.read();  // receive high byte (overwrites previous reading) 
+  val_1 = Wire.read(); 
+  channel_7 = int(val_0)*16 + int(val_1&gt;&gt;4); 
+  analog_7 = channel_7 * 5.0 / 4095.0; 
+  
+  printf("Channel 7: digital value = %d", channel_7); 
+  printf(" analog value = %f\n", analog_7); 
+  
+  printf("\n"); 
+
+  delay(5000); 
+
+} 
+
+
+int main (){ 
+	setup(); 
+	while(1){ 
+		loop(); 
+	} 
+	return (0); 
+}
+</pre>
+</div>
+<p>Here is the output of this program connecting the 5V pin of Raspberry to the analog input 0:</p>
+<img src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/adc_output.png" border="0" alt="ADC_output" style="width: 100% !important; height: auto !important;"> <!-- STEP 7 -->
+<h2><a name="step7" class="ancla">7. UART.</a></h2>
+<p>Accessing the UART with arduPi library is as simple as doing it with Arduino.<br> You need to include arduPi.h in your code and create an instance of SerialPi class naming it Serial.<br> Naming the instance as Serial allows you to use the arduino syntax. (All this is allready done if you use the provided template to create your programs).</p>
+The functions available are:<br> 
+<ul>
+<li>Serial.available()</li>
+<li>Serial.begin()</li>
+<li>Serial.end()</li>
+<li>Serial.flush()</li>
+<li>Serial.peek()</li>
+<li>Serial.print()</li>
+<li>Serial.println()</li>
+<li>Serial.read()</li>
+<li>Serial.readBytes()</li>
+<li>Serial.readBytesUntil()</li>
+<li>Serial.find()</li>
+<li>Serial.findUntil()</li>
+<li>Serial.parseInt()</li>
+<li>Serial.parseFloat()</li>
+<li>Serial.setTimeout()</li>
+<li>Serial.write()</li>
+</ul>
+<p>All this functions have the same functionality as the arduino ones. You can find more information at:<br> <a href="http://arduino.cc/en/Reference/serial">http://arduino.cc/en/Reference/serial</a><br> An example of code that acess the UART can be found in the <a href="http://www.cooking-hacks.com/index.php/documentation/tutorials/raspberry-pi-xbee">Raspberry Pi XBee tutorial </a></p>
+<!-- STEP 8 -->
+<h2><a name="step8" class="ancla">8. i2C.</a></h2>
+<p>An example of using i2C can be found on the <a href="http://www.cooking-hacks.com/index.php/documentation/tutorials/raspberry-pi-to-arduino-shields-connection-bridge?utm_source=banner_raspberry#step6">ADC</a> section.<br> Here we show another example using the BlinkM <a href="http://www.cooking-hacks.com/index.php//blinkm-i2C-controlled-rgb-led.html">RGB i2C controlled led</a>.</p>
+<img src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/blinkm.png" border="0" alt="BlinkM RGB LED" style="width: auto !important; margin-left: 80px; border: 0px;"><br>
+<p>BlinkM uses a high quality, high power RGB LED and a small AVR microcontroller to allow a user to digitally control an RGB LED over a simple i2C interface.<br> In the example we will change the led color using fade transitions and also changing it directly. More information about the LED and the commands we can send to it can be found in the <a href="http://thingm.com/fileadmin/thingm/downloads/BlinkM_datasheet.pdf">datasheet</a>.</p>
+Connect the (-) pin of the led with the GND pin of the shield.<br> Connect the (+) pin of the led with the 5V pin of the shield.<br> Connect the d pin of the led with the SDA pin of the shield.<br> Connect the c pin of the led with the SCL pin of the shield.
+<p>&nbsp;</p>
+<img src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/blinkm_red.png" border="0" alt="BlinkM RGB LED Red" style="width: auto !important; margin-left: 100px; border: 0px;">
+<p>Here is the code:</p>
+<div class="codigo"><a href="http://www.cooking-hacks.com/index.php/documentation/tutorials/raspberry-pi-to-arduino-shields-connection-bridge?utm_source=banner_raspberry#">Show Code</a>
+<pre class="codigo_plegado">/*
+*  Copyright (C) 2012 Libelium Comunicaciones Distribuidas S.L.
+*  http://www.libelium.com
+*
+*  This program is free software: you can redistribute it and/or modify
+*  it under the terms of the GNU General Public License as published by
+*  the Free Software Foundation, either version 3 of the License, or
+*  (at your option) any later version.
+*
+*  This program is distributed in the hope that it will be useful,
+*  but WITHOUT ANY WARRANTY; without even the implied warranty of
+*  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+*  GNU General Public License for more details.
+*
+*  You should have received a copy of the GNU General Public License
+*  along with this program.  If not, see .
+*
+*  Version 0.1
+*  Author: Anartz Nuin Jiménez
+*/
+
+
+//Include arduPi library
+#include "arduPi.h"
+
+
+void setup(){
+	Wire.begin();
+	Wire.beginTransmission(9);
+	Wire.write('o'); //End the current Light script
+	Wire.endTransmission();
+}
+
+void loop(){
+	for (int i=0;i &lt; 5;i++){
+		Wire.beginTransmission(9);
+		Wire.write('n'); //Change to color
+		Wire.write(byte(0xff)); //Red component
+		Wire.write(byte(0x00)); //Green component
+		Wire.write(byte(0x00)); //Blue component
+		Wire.endTransmission();
+
+		delay(500);
+		
+		Wire.beginTransmission(9);
+		Wire.write('n'); //Change to color
+		Wire.write(byte(0x00)); //Red component
+		Wire.write(byte(0x00)); //Green component
+		Wire.write(byte(0xff)); //Blue component
+		Wire.endTransmission();
+		
+		delay(500);
+	}
+	
+	for (int i=0;i &lt; 10;i++){
+		Wire.beginTransmission(9);
+		Wire.write('c'); //Fade to color
+		Wire.write(byte(0xff)); //Red component
+		Wire.write(byte(0x00)); //Green component
+		Wire.write(byte(0x5a)); //Blue component
+		Wire.endTransmission();
+
+		delay(150);
+		
+		Wire.beginTransmission(9);
+		Wire.write('c'); //Fade to color
+		Wire.write(byte(0x55)); //Red component
+		Wire.write(byte(0x20)); //Green component
+		Wire.write(byte(0x5a)); //Blue component
+		Wire.endTransmission();
+
+		delay(150);
+	}
+}
+
+int main (){
+	setup();
+	while(1){
+		loop();
+	}
+	return (0);
+}
+</pre>
+</div>
+<p>This code alternate from red to blue five times and then make some smooth transitions between purplish colors.</p>
+<img src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/raspberry_blinkm_sequence.png" border="0" alt="BlinkM RGB LED transition" style="width: auto !important; border: 0px;"><br> <!-- STEP 9 -->
+<h2><a name="step9" class="ancla">9. SPI.</a></h2>
+<p>It is possible to communicate with SPI devices using the functions provided by arduPi.<br> In this example we use the SPI functions for printing messages on the <a href="http://www.cooking-hacks.com/index.php/spi-lcd-module-arduino-compatible.html">ST7920 LCD12864 (SPI LCD)</a></p>
+<p>First of all, we need to put the switch of the LCD in SPI mode.<br> Now we proceed with the connection between the LCD and the Raspberry Pi to arduino shield :</p>
+VCC of the LCD to 5v of the shield <br> GND of the LCD to GND of the shield <br> SCK of the LCD to SCK of the shield <br> SID of the LCD to MOSI of the shield <br> CS of the LCD to 8 pin of the shield <br>
+<p>As you can see we are using the pin number 8 of the Raspberry Pi shield as chip select. So when we need to select the LCD as the target device for the SPI communication we need to put the 8 pin to HIGH.</p>
+<img src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/spi_lcd_wires.png" border="0" alt="SPI lcd connection" style="width: auto !important; margin-left: 100px;"><br>
+<p>Here is the code:</p>
+<div class="codigo"><a href="http://www.cooking-hacks.com/index.php/documentation/tutorials/raspberry-pi-to-arduino-shields-connection-bridge?utm_source=banner_raspberry#">Show Code</a>
+<pre class="codigo_plegado">/*
+*  Copyright (C) 2012 Libelium Comunicaciones Distribuidas S.L.
+*  http://www.libelium.com
+*
+*  This program is free software: you can redistribute it and/or modify
+*  it under the terms of the GNU General Public License as published by
+*  the Free Software Foundation, either version 3 of the License, or
+*  (at your option) any later version.
+*
+*  This program is distributed in the hope that it will be useful,
+*  but WITHOUT ANY WARRANTY; without even the implied warranty of
+*  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+*  GNU General Public License for more details.
+*
+*  You should have received a copy of the GNU General Public License
+*  along with this program.  If not, see .
+*
+*  Version 0.1
+*  Author: Anartz Nuin Jiménez
+*/
+
+//Include arduPi library
+#include "arduPi.h"
+
+int latchPin = 8;
+unsigned char char1[]=" Cooking Hacks  ";
+unsigned char char2[]="  SPI LCD for   ";
+unsigned char char3[]="  Raspberry Pi  ";
+
+void initialise();
+void displayString(int X,int Y,unsigned char *ptr,int dat);
+void writeCommand(int CMD);
+void writeData(int CMD);
+void writeByte(int dat);
+void clear();
+
+void setup(){
+	SPI.begin();
+	SPI.setBitOrder(MSBFIRST);
+	SPI.setDataMode(SPI_MODE0);
+	SPI.setClockDivider(SPI_CLOCK_DIV128);
+
+	initialise();
+}
+
+void loop(){
+	displayString(0,0,char1,16);
+	delay(2000);
+	clear();
+	displayString(1,0,char2,16);
+	displayString(2,0,char3,16);
+	delay(2000);
+	clear();
+}
+
+void initialise(){
+	pinMode(latchPin, OUTPUT);     
+	digitalWrite(latchPin, LOW);
+
+	delayMicroseconds(80);
+
+	writeCommand(0x30);
+	writeCommand(0x0c);
+	writeCommand(0x01);
+	writeCommand(0x06);
+}
+
+
+void displayString(int X,int Y,unsigned char *ptr,int dat){
+	int i;
+
+	switch(X){
+		case 0:  Y|=0x80;break;
+
+		case 1:  Y|=0x90;break;
+
+		case 2:  Y|=0x88;break;
+
+		case 3:  Y|=0x98;break;
+
+		default: break;
+	}
+
+	writeCommand(Y);
+
+	for(i=0;i &lt; dat;i++){ 
+		writeData(ptr[i]);
+	}
+
+}
+
+void writeCommand(int CMD){
+	int H_data,L_data;
+	H_data = CMD;
+	H_data &amp;= 0xf0;
+	L_data = CMD;
+	L_data &amp;= 0x0f;
+	L_data &lt;&lt;= 4;
+	writeByte(0xf8);
+	writeByte(H_data);
+	writeByte(L_data);
+}
+
+void writeData(int CMD){
+	int H_data,L_data;
+	H_data = CMD;
+	H_data &amp;= 0xf0;
+	L_data = CMD;
+	L_data &amp;= 0x0f;
+	L_data &lt;&lt;= 4;
+	writeByte(0xfa);
+	writeByte(H_data);
+	writeByte(L_data);
+}
+
+void writeByte(int dat){
+	digitalWrite(latchPin, HIGH);
+	delayMicroseconds(80);
+	SPI.transfer(dat);
+	digitalWrite(latchPin, LOW);
+}
+
+void clear(){
+	writeCommand(0x30);
+	writeCommand(0x01);
+}
+
+
+int main (){
+	setup();
+	while(1){
+		loop();
+	}
+	return (0);
+}
+</pre>
+</div>
+<p>This program will show the messages "Cooking Hacks" and "SPI LCD for Raspberry Pi" with a delay of 2 seconds in between.</p>
+<img src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/spi_lcd_cooking.png" border="0" alt="SPI lcd for raspberry" style="width: auto !important;"><br> <img src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/spi_lcd_raspberry.png" border="0" alt="SPI lcd for raspberry" style="width: auto !important;"><br> <!-- STEP 10 -->
+<h2><a name="step10" class="ancla">10. Support.</a></h2>
+<p>Get help in the specific section created in <a href="http://www.cooking-hacks.com/forum/viewforum.php?f=37&sid=e743ea7e744c3df1233358a0a50c5898"> our Forum</a>.</p>
+<!-- STEP 11 -->
+<h2><a name="step11" class="ancla">11. Get the shield and kits.</a></h2>
+<br> 
+<ul>
+<li><a href="http://www.cooking-hacks.com/index.php/shop/raspberry-pi/raspberry-pi-to-arduino-shield-connection-bridge.html">Raspberry Pi to Arduino shields connection bridge</a></li>
+</ul>
+<h4>Raspberry Pi kits</h4>
+<p>&nbsp;</p>
+<ul>
+<li><a href="http://www.cooking-hacks.com/index.php/starter-kit-for-raspberry-pi-a-v-edition-raspberry-pi.html">Starter Kit for Raspberry Pi (A/V Edition) + Raspberry Pi</a></li>
+<li><a href="http://www.cooking-hacks.com/index.php/starter-kit-for-raspberry-pi-a-v-edition.html">Starter Kit for Raspberry Pi (A/V Edition)</a></li>
+<li><a href="http://www.cooking-hacks.com/index.php/starter-kit-for-raspberry-pi-raspberry-pi.html">Starter Kit for Raspberry Pi + Raspberry Pi</a></li>
+<li><a href="http://www.cooking-hacks.com/index.php/starter-kit-for-raspberry-pi.html">Starter Kit for Raspberry Pi</a></li>
+<li><a href="http://www.cooking-hacks.com/index.php/a-v-kit-for-raspberry-pi-raspberry-pi.html">A/V Kit for Raspberry Pi + Raspberry Pi</a></li>
+<li><a href="http://www.cooking-hacks.com/index.php/a-v-kit-for-raspberry-pi.html">A/V Kit for Raspberry Pi</a></li>
+</ul>
+<p>&nbsp;</p>
+<h4>Raspberry Pi shields</h4>
+<p>&nbsp;</p>
+<ul>
+<li><a href="http://www.cooking-hacks.com/index.php/gprs-sim900-shield-for-raspberry-pi.html">GPRS/GSM Quadband shield for Raspberry Pi</a></li>
+<li><a href="http://www.cooking-hacks.com/index.php/3g-gprs-shield-for-raspberry-pi-3g-gps.html">3G / GPRS shield for Raspberry Pi (3G+GPS)</a></li>
+<li><a href="http://www.cooking-hacks.com/index.php/3g-gprs-shield-for-raspberry-pi-3g-gps-audio-video-kit.html">3G / GPRS shield for Raspberry Pi (3G+GPS) + Audio/Video Kit</a></li>
+<li><a href="http://www.cooking-hacks.com/index.php/rfid-13-56-mhz-shield-for-raspberry-pi.html">RFID 13.56 MHz/NFC shield for Raspberry Pi</a></li>
+<li><a href="http://www.cooking-hacks.com/index.php/rfid-125-khz-shield-for-raspberry-pi.html">RFID 125 KHz shield for Raspberry Pi</a></li>
+<li><a href="http://www.cooking-hacks.com/index.php/Wifi-shield-for-raspberry-pi.html">Wifi shield for Raspberry Pi</a></li>
+<li><a href="http://www.cooking-hacks.com/index.php/documentation/tutorials/raspberry-pi-xbee">XBee shields for Raspberry Pi</a></li>
+<li><a href="http://www.cooking-hacks.com/index.php/Bluetooth-shield-for-raspberry-pi.html">Bluetooth shield for Raspberry Pi</a></li>
+<li><a href="http://www.cooking-hacks.com/index.php/Bluetooth-pro-shield-for-raspberry-pi.html">Bluetooth PRO shield for Raspberry Pi</a></li>
+<li><a href="http://www.cooking-hacks.com/index.php/Gps-shield-for-raspberry-pi.html">GPS shield for Raspberry Pi</a></li>
+<li><a href="http://www.cooking-hacks.com/index.php/Radiation-shield-for-raspberry-pi-geiger-tube.html">Radiation shield for Raspberry Pi + Geiger Tube</a></li>
+</ul>
+<p>&nbsp;</p>
+</div>
+<div class="fin_texto_cms">&nbsp;</div>
+<div class="back"><a href="http://www.cooking-hacks.com/index.php/documentation/tutorials">&lt;&lt; Back to "Documentation Index"</a></div>
+</ul>
+</div></div>                </div>
+                <div class="col-right sidebar"><script type="text/javascript">// <![CDATA[
+$j(document).ready(function(){
+mdmr1=Math.floor(Math.random()*2);
+mdmr2=Math.floor(Math.random()*3);
+mdmr3=Math.floor(Math.random()*2);
+/*mdmr4 y mdmr5 son mientras tengamos rotando el banner de raspberry pi con el de waspmote starter kit y el waspmote tutorial*/ 
+mdmr4=Math.floor(Math.random()*2);
+mdmr5=Math.floor(Math.random()*2);
+
+/*cyberweekend */
+mdmr6=Math.floor(Math.random()*2);
+
+
+$j('#c2').cycle({
+    fx:     'fade',
+    startingSlide: mdmr2,
+speed:  1000,
+timeout:  8000,
+pause: 1
+    });
+    
+    
+$j('#c3').cycle({
+    fx:     'fade',
+    startingSlide: mdmr3,
+speed:  1000,
+timeout:  3000,
+pause: 1
+    }); 
+/*c4 y c5 son mientras tengamos rotando el banner de raspberry pi con el de waspmote starter kit y el waspmote tutorial*/       
+$j('#c4').cycle({
+    fx:     'fade',
+    startingSlide: mdmr4,
+delay:  1500,
+speed:  1000,
+timeout:  3000,
+pause: 1
+    }); 
+    
+$j('#c5').cycle({
+    fx:     'fade',
+    startingSlide: mdmr5,
+delay:  1500,
+speed:  1000,
+timeout:  3000,
+pause: 1
+    }); 
+
+    
+/*cyberweekend*/    
+/*
+$j('#c6').cycle({
+    fx:     'fade',
+    startingSlide: mdmr6,
+delay:  750,
+speed:  1000,
+timeout:  3000,
+pause: 1
+    }); 
+*/  
+    
+    
+/*Funcion Oscar discriminar banners al añadir c4 y c5 para el banner de raspberry pi*/
+
+var titulo_pag=$j(this).attr('title');
+
+if((titulo_pag=="Cooking Hacks - Tasty Electronics for the Arduino and Raspberry Pi Community")||(titulo_pag=="Cooking Hacks - Documentation - Waspmote - Wireless Sensor Networks Open Source Platform"))
+{   
+$j("#c4").css("display","none");
+$j("#ondemand").css("display","none");
+}   
+    
+else
+{   
+$j("#c5").css("display","none");    
+$j('#c1').cycle({
+    fx:     'fade',
+    startingSlide: mdmr1,
+ speed:  1000,
+timeout:  3000,
+pause: 1
+    });
+}
+
+
+/*Funcion original Oscar discriminar banners */
+/*
+var titulo_pag=$j(this).attr('title');
+
+if((titulo_pag=="Cooking Hacks - Tasty Electronics for the Arduino Community")||(titulo_pag=="Cooking Hacks - Documentation - Waspmote - Wireless Sensor Networks Open Source Platform"))
+{   
+$j("#waspmote_wsn_banner").css("display","none");
+}   
+    
+else
+{   
+$j("#waspmote_starter_kit_banner").css("display","none");   
+}
+*/
+    
+});
+// ]]></script>
+<div class="banner_sales"><a href="http://www.cooking-hacks.com/index.php/shop/sales.html?utm_source=banner_sales&utm_medium=banner"> <img src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/banner_sales_eng.png" border="0" alt="banner_sales_eng.png"> </a></div>
+<div class="banner_new"><a href="http://www.cooking-hacks.com/index.php/shop/new-products.html?utm_source=banner_newproducts&utm_medium=banner"> <img src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/banner_new_eng.png" border="0" alt="banner_new_eng.png"></a></div>
+<div class="banner_top"><a href="http://www.cooking-hacks.com/index.php/shop/top-sellers.html?utm_source=banner_topproducts&utm_medium=banner"> <img src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/banner_top_rev_eng.png" border="0" alt="banner_exclusive_esp"></a></div>
+<div id="c1" class="pics banner" style="position: relative; margin-left: 0px !important; margin-bottom: 5px !important;"><a href="http://www.cooking-hacks.com/index.php/documentation/tutorials/ehealth-biometric-sensor-platform-arduino-raspberry-pi-medical?utm_source=banner_ehealth&utm_medium=banner" style="position: absolute; top: 0px; left: 0px; display: block; z-index: 3; opacity: 1; width: 195px; height: 184px;"> <img src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/banner_e-health_sensor_platform_eng.png" border="0" alt="banner_e-health_sensor_platform_eng" width="195px" height="184px"> </a><a href="http://www.cooking-hacks.com/index.php/shop/on-demand-products.html?utm_source=banner_ondemand&utm_medium=banner" id="ondemand" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 2; opacity: 0; width: 195px; height: 200px;"> <img src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/banner_ondemand_sidebar_eng.png" border="0" alt="banner_ondemand_sidebar_eng" width="195px" height="200px"> </a></div>
+<!-- cyberweekend
+<div id="c6" class="pics banner" style="position: relative; margin-left: 0px !important; margin-bottom: 5px !important;" _mce_style="position: relative; margin-left: 0px !important; margin-bottom: 5px !important;"><a href="http://www.cooking-hacks.com/index.php/cyberweekend-2012?utm_source=banner_cybermonday_2012&amp;utm_medium=banner" _mce_href="http://www.cooking-hacks.com/index.php/cyberweekend-2012?utm_source=banner_cybermonday_2012&amp;utm_medium=banner"><img style="width: 195px !important; height: 184px !important;" _mce_style="width: 195px !important; height: 184px !important;" src="http://www.cooking-hacks.com/index.php/../skin/frontend/default/cooking/images/banner_cybermonday.png" _mce_src="http://www.cooking-hacks.com/index.php/../skin/frontend/default/cooking/images/banner_cybermonday.png" alt="banner_cybermonday" /></a></div>
+--> <!-- C&oacute;digo nuevo al a&ntilde;adir el banner de raspberry pi que rota con los banners de waspmote starter kit con el de waspmote tutorial -->
+<div id="c4" class="pics banner" style="position: relative; margin-left: 0px !important; margin-bottom: 5px !important;"><a href="http://www.cooking-hacks.com/index.php/documentation/tutorials/raspberry-pi-to-arduino-shields-connection-bridge?utm_source=banner_raspberry&utm_medium=banner" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 2; opacity: 0; width: 207px; height: 195px;"> <img src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/banner_raspberry_pi_arduino_eng.png" border="0" alt="banner_raspberry_pi_arduino_eng" style="width: 207px !important; height: 195px !important;"> </a> <a href="http://www.cooking-hacks.com/index.php/documentation/tutorials/waspmote?utm_source=banner_waspmote_sidebar&utm_medium=banner" style="position: absolute; top: 0px; left: 0px; display: block; z-index: 3; opacity: 1; width: 207px; height: 195px;"> <img src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/banner_waspmote_eng.png" border="0" alt="banner_waspmote_eng" style="width: 207px !important; height: 195px !important;"> </a></div>
+<div id="c5" class="pics banner" style="position: relative; margin-left: 0px !important; margin-bottom: 5px !important; display: none;"><a href="http://www.cooking-hacks.com/index.php/documentation/tutorials/raspberry-pi-to-arduino-shields-connection-bridge?utm_source=banner_raspberry&utm_medium=banner" style="position: absolute; top: 0px; left: 0px; display: block; z-index: 3; opacity: 1; width: 207px; height: 195px;"> <img src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/banner_raspberry_pi_arduino_eng.png" border="0" alt="banner_raspberry_pi_arduino_eng" style="width: 207px !important; height: 195px !important;"> </a> <a href="http://www.cooking-hacks.com/index.php/waspmote-starter-kit.html?utm_source=banner_waspmote_starter_kit&utm_medium=banner" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 2; opacity: 0; width: 207px; height: 195px;"> <img src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/banner_waspmote_starter_kit_eng.png" border="0" alt="banner_waspmote_starter_kit_eng" style="width: 207px !important; height: 195px !important;"> </a></div>
+<!-- C&oacute;digo original antes de a&ntilde;adir el banner de raspberry pi que rota con los banners de waspmote starter kit con el de waspmote tutorial --> <!--
+<div id="waspmote_wsn_banner" class="banner" style="margin-left: -19px !important; margin-bottom: 5px !important;" _mce_style="margin-left: -19px !important; margin-bottom: 5px !important;"><a href="http://www.cooking-hacks.com/index.php/documentation/tutorials/waspmote?utm_source=banner_waspmote_sidebar&amp;utm_medium=banner" _mce_href="http://www.cooking-hacks.com/index.php/documentation/tutorials/waspmote?utm_source=banner_waspmote_sidebar&amp;utm_medium=banner"><img src="http://www.cooking-hacks.com/index.php/../skin/frontend/default/cooking/images/banner_waspmote_eng.png" _mce_src="http://www.cooking-hacks.com/index.php/../skin/frontend/default/cooking/images/banner_waspmote_eng.png" alt="banner_waspmote_eng" /></a></div>
+<div id="waspmote_starter_kit_banner" class="banner" style="margin-left: -20px !important; margin-bottom: 5px !important;" _mce_style="margin-left: -20px !important; margin-bottom: 5px !important;"><a href="http://www.cooking-hacks.com/index.php/waspmote-starter-kit.html?utm_source=banner_waspmote_starter_kit&amp;utm_medium=banner" _mce_href="http://www.cooking-hacks.com/index.php/waspmote-starter-kit.html?utm_source=banner_waspmote_starter_kit&amp;utm_medium=banner"><img src="http://www.cooking-hacks.com/index.php/../skin/frontend/default/cooking/images/banner_waspmote_starter_kit_eng.png" _mce_src="http://www.cooking-hacks.com/index.php/../skin/frontend/default/cooking/images/banner_waspmote_starter_kit_eng.png" alt="banner_waspmote_starter_kit_eng" /></a></div>
+-->
+<div id="c3" class="pics banner" style="position: relative; margin-bottom: 5px;"><a href="http://www.cooking-hacks.com/index.php/documentation/tutorials/arduino-3g-gprs-gsm-gps?utm_source=banner_3g_shield&utm_medium=banner" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 2; opacity: 0; width: 195px; height: 195px;"> <img src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/banner_3g_shield_eng.png" border="0" alt="banner_3g_shield_eng" width="195px" height="195px"> </a> <a href="http://www.cooking-hacks.com/index.php/distributors?utm_source=banner_distributors&utm_medium=banner" style="position: absolute; top: 0px; left: 0px; display: block; z-index: 3; opacity: 1; width: 195px; height: 184px;"> <img src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/banner_distributor_eng.png" border="0" alt="banner_distributor_eng" width="195px" height="184px"> </a></div>
+<div id="c2" class="pics banner" style="position: relative; margin-bottom: 5px;"><a href="http://www.cooking-hacks.com/index.php/save-now-discount?utm_source=banner_discount&utm_medium=banner" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 3; opacity: 0; width: 195px; height: 184px;"> <img src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/banner_discount_eng.png" border="0" alt="banner_discount_eng" width="195px" height="184px"> </a> <a href="http://www.cooking-hacks.com/index.php/shop/arduino/starter-kits.html?utm_source=banner_kits&utm_medium=banner" style="position: absolute; top: 0px; left: 0px; display: none; z-index: 3; opacity: 0; width: 195px; height: 184px;"> <img src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/banners_kits_eng.png" border="0" alt="banners_kits_eng" width="195px" height="184px"> </a> <a href="http://www.cooking-hacks.com/index.php/shop/arduino/packs.html?utm_source=banner_packs&utm_medium=banner" style="position: absolute; top: 0px; left: 0px; display: block; z-index: 4; opacity: 1; width: 195px; height: 184px;"> <img src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/banner_arduino_saving_eng.png" border="0" alt="banner_arduino_saving_eng" width="195px" height="184px"> </a></div><div class="block block-list block-viewed">
+    <div class="block-title">
+        <strong><span>Recently Viewed Products</span></strong>
+    </div>
+    <div class="block-content">
+        <ol id="recently-viewed-items">
+                    <li class="item odd">
+                <p class="product-name"><a href="http://www.cooking-hacks.com/index.php/electrocardiogram-sensor-ecg-ehealth-medical.html">Electrocardiogram Sensor (ECG) for e-Health Platform [Biometric / Medical Applications]</a></p>
+            </li>
+                    <li class="item even">
+                <p class="product-name"><a href="http://www.cooking-hacks.com/index.php/patient-position-sensor-accelerometer-ehealth-medical.html">Patient Position Sensor (Accelerometer) for e-Health Platform [Biometric / Medical Applications]</a></p>
+            </li>
+                    <li class="item odd">
+                <p class="product-name"><a href="http://www.cooking-hacks.com/index.php/ehealth-sensor-shield-biometric-medical-arduino-raspberry-pi.html">e-Health Sensor Shield for Arduino and Raspberry Pi [Biometric / Medical Applications]</a></p>
+            </li>
+                    <li class="item last even">
+                <p class="product-name"><a href="http://www.cooking-hacks.com/index.php/ehealth-sensors-complete-kit-biometric-medical-arduino-raspberry-pi.html">e-Health Sensor Platform Complete Kit for Arduino and Raspberry Pi [Biometric / Medical Applications] </a></p>
+            </li>
+                </ol>
+        <script type="text/javascript">decorateList('recently-viewed-items');</script>
+    </div>
+</div>
+<div class="block block-list block-compare">
+    <div class="block-title">
+        <strong><span>Compare Products                    </span></strong>
+    </div>
+    <div class="block-content">
+            <p class="empty">You have no items to compare.</p>
+        </div>
+</div>
+<div class="block block-cart">
+        <div class="block-title">
+        <strong><span>Cart</span></strong>
+    </div>
+    <div class="block-content">
+            <div class="summary">
+                            <p class="amount">There are <a href="http://www.cooking-hacks.com/index.php/checkout/cart/">2 items</a> in your cart.</p>
+                        <p class="subtotal">
+                                    <span class="label">Cart Subtotal:</span> <span class="price">€110.00</span>                                                </p>
+        </div>
+            <div class="actions">
+                <button type="button" title="Checkout" class="button" onclick="setLocation(&#39;http://www.cooking-hacks.com/index.php/checkout/onepage/&#39;)"><span><span>Checkout</span></span></button>
+    </div>
+                    <p class="block-subtitle">Recently added item(s)</p>
+        <ol id="cart-sidebar" class="mini-products-list">
+                    <li class="item odd">
+            <a href="http://www.cooking-hacks.com/index.php/electrocardiogram-sensor-ecg-ehealth-medical.html" title="Electrocardiogram Sensor (ECG) for e-Health Platform [Biometric / Medical Applications]" class="product-image"><img src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/parches_presentacion.png" width="50" height="50" alt="Electrocardiogram Sensor (ECG) for e-Health Platform [Biometric / Medical Applications]"></a>
+        <div class="product-details">
+        <a href="http://www.cooking-hacks.com/index.php/checkout/cart/delete/id/150517/uenc/aHR0cDovL3d3dy5jb29raW5nLWhhY2tzLmNvbS9pbmRleC5waHAvZG9jdW1lbnRhdGlvbi90dXRvcmlhbHMvcmFzcGJlcnJ5LXBpLXRvLWFyZHVpbm8tc2hpZWxkcy1jb25uZWN0aW9uLWJyaWRnZT91dG1fc291cmNlPWJhbm5lcl9yYXNwYmVycnk,/" title="Remove This Item" onclick="return confirm(&#39;Are you sure you would like to remove this item from the shopping cart?&#39;);" class="btn-remove">Remove This Item</a>
+                <a href="http://www.cooking-hacks.com/index.php/checkout/cart/configure/id/150517/" title="Edit item" class="btn-edit">Edit item</a>
+                <p class="product-name"><a href="http://www.cooking-hacks.com/index.php/electrocardiogram-sensor-ecg-ehealth-medical.html">Electrocardiogram Sensor (ECG) for e-Health Platform [Biometric / Medical Applications]</a></p>
+        <strong>1</strong> x
+
+    
+                                <span class="price">€35.00</span>                    
+
+
+    
+    
+            </div>
+</li>
+                    <li class="item last even">
+            <a href="http://www.cooking-hacks.com/index.php/ehealth-sensor-shield-biometric-medical-arduino-raspberry-pi.html" title="e-Health Sensor Shield for Arduino and Raspberry Pi [Biometric / Medical Applications]" class="product-image"><img src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/ehealth3.png" width="50" height="50" alt="e-Health Sensor Shield for Arduino and Raspberry Pi [Biometric / Medical Applications]"></a>
+        <div class="product-details">
+        <a href="http://www.cooking-hacks.com/index.php/checkout/cart/delete/id/150513/uenc/aHR0cDovL3d3dy5jb29raW5nLWhhY2tzLmNvbS9pbmRleC5waHAvZG9jdW1lbnRhdGlvbi90dXRvcmlhbHMvcmFzcGJlcnJ5LXBpLXRvLWFyZHVpbm8tc2hpZWxkcy1jb25uZWN0aW9uLWJyaWRnZT91dG1fc291cmNlPWJhbm5lcl9yYXNwYmVycnk,/" title="Remove This Item" onclick="return confirm(&#39;Are you sure you would like to remove this item from the shopping cart?&#39;);" class="btn-remove">Remove This Item</a>
+                <a href="http://www.cooking-hacks.com/index.php/checkout/cart/configure/id/150513/" title="Edit item" class="btn-edit">Edit item</a>
+                <p class="product-name"><a href="http://www.cooking-hacks.com/index.php/ehealth-sensor-shield-biometric-medical-arduino-raspberry-pi.html">e-Health Sensor Shield for Arduino and Raspberry Pi [Biometric / Medical Applications]</a></p>
+        <strong>1</strong> x
+
+    
+                                <span class="price">€75.00</span>                    
+
+
+    
+    
+            </div>
+</li>
+                </ol>
+        <script type="text/javascript">decorateList('cart-sidebar', 'none-recursive')</script>
+        </div>
+</div>
+<div class="block block-subscribe">
+    <div class="block-title">
+        <strong><span>Newsletter</span></strong>
+    </div>
+    <form action="http://www.cooking-hacks.com/index.php/newsletter/subscriber/new/" method="post" id="newsletter-validate-detail">
+        <div class="block-content">
+        <div class="form-subscribe-header">Sign up for our newsletter</div>
+            <label for="newsletter">Sign Up for Our Newsletter:</label>
+            <div class="input-box">
+               <input type="text" name="email" id="newsletter" title="Sign up for our newsletter" class="input-text required-entry validate-email">
+            </div>
+            <div class="actions">
+                <button type="submit" title="Subscribe" class="button"><span><span>Subscribe</span></span></button>
+            </div>
+        </div>
+    </form>
+    <script type="text/javascript">
+    //<![CDATA[
+        var newsletterSubscriberFormDetail = new VarienForm('newsletter-validate-detail');
+    //]]>
+    </script>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+    function validatePollAnswerIsSelected()
+    {
+        var options = $$('input.poll_vote');
+        for( i in options ) {
+            if( options[i].checked == true ) {
+                return true;
+            }
+        }
+        return false;
+    }
+//]]>
+</script>
+<div class="block block-poll">
+    <div class="block-title">
+        <strong><span>Community Poll</span></strong>
+    </div>
+    <form id="pollForm" action="http://www.cooking-hacks.com/index.php/poll/vote/add/poll_id/1/" method="post" onsubmit="return validatePollAnswerIsSelected();">
+        <div class="block-content">
+            <p class="block-subtitle">What is your favorite color</p>
+                        <ul id="poll-answers">
+                                <li class="odd">
+                    <input type="radio" name="vote" class="radio poll_vote" id="vote_1" value="1">
+                    <span class="label"><label for="vote_1">Green</label></span>
+                </li>
+                                <li class="even">
+                    <input type="radio" name="vote" class="radio poll_vote" id="vote_2" value="2">
+                    <span class="label"><label for="vote_2">Red</label></span>
+                </li>
+                                <li class="odd">
+                    <input type="radio" name="vote" class="radio poll_vote" id="vote_3" value="3">
+                    <span class="label"><label for="vote_3">Black</label></span>
+                </li>
+                                <li class="last even">
+                    <input type="radio" name="vote" class="radio poll_vote" id="vote_4" value="4">
+                    <span class="label"><label for="vote_4">Magenta</label></span>
+                </li>
+                            </ul>
+            <script type="text/javascript">decorateList('poll-answers');</script>
+                        <div class="actions">
+                <button type="submit" title="Vote" class="button"><span><span>Vote</span></span></button>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="banner"><img src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/banners_info_pagos.png" alt="info_pagos"></div>
+<div class="banner" style="margin-left:22px !important;"><a href="http://summit.oshwa.org/sponsor/" target="_blank"><img title="”Digi_supporter”" src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/banner_digi_supporter.png" alt="digi_supporter.png"></a></div></div>
+            </div>
+        </div>
+        <div class="footer-container">
+    <div class="footer">
+        <ul>
+<li><a href="http://www.cooking-hacks.com/index.php/about-magento-demo-store">About Us</a></li>
+<li class="last"><a href="http://www.cooking-hacks.com/index.php/customer-service">Customer Service</a></li>
+</ul><ul class="links">
+                        <li class="first"><a href="http://www.cooking-hacks.com/index.php/catalog/seo_sitemap/category/" title="Site Map">Site Map</a></li>
+                                <li><a href="http://www.cooking-hacks.com/index.php/catalogsearch/term/popular/" title="Search Terms">Search Terms</a></li>
+                                <li><a href="http://www.cooking-hacks.com/index.php/catalogsearch/advanced/" title="Advanced Search">Advanced Search</a></li>
+                                <li><a href="http://www.cooking-hacks.com/index.php/sales/guest/form/" title="Orders and Returns">Orders and Returns</a></li>
+                                <li class=" last"><a href="http://www.cooking-hacks.com/index.php/contacts/" title="Contact Us">Contact Us</a></li>
+            </ul>
+        <p class="bugs">Help Us to Keep Magento Healthy - <a href="http://www.magentocommerce.com/bug-tracking" onclick="this.target=&#39;_blank&#39;"><strong>Report All Bugs</strong></a> (ver. 1.6.2.0)</p>
+        <address>© Libelium Comunicaciones Distribuidas S.L. | <a href="http://www.libelium.com/legal">Terms of use</a><br><br>Virtual store subsidized by the Department of Science, Technology and University of the Government of Aragon</address>
+    </div>
+</div>
+            </div>
+</div>
+<!-- ClickTale Bottom part -->
+<div id="ClickTaleDiv" style="display: none;"></div>
+<script type="text/javascript">
+if(document.location.protocol!='https:')
+  document.write(unescape("%3Cscript%20src='http://s.clicktale.net/WRd.js'%20type='text/javascript'%3E%3C/script%3E"));
+</script><script src="./Cooking Hacks - Documentation - Raspberry Pi to Arduino shields connection bridge_files/WRd.js" type="text/javascript"></script>
+<script type="text/javascript">
+if(typeof ClickTale=='function') ClickTale(12114,1,"www14");
+</script>
+<!-- ClickTale end of Bottom part -->
+
+</body></html>

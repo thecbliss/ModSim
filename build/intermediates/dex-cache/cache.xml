@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\Bliss\AppData\Local\Android\sdk1\extras\android\m2repository\com\android\support\support-v4\18.0.0\support-v4-18.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="44ec51e9d395a47aab135e5e1b556c0007442156">
+        <dex dex="C:\Users\Bliss\AndroidstudioProjects\Mod_Sim15\app\build\intermediates\pre-dexed\debug\support-v4-18.0.0-6bbb050909410afb191ebb0e7d3358c49a6fa3cf.jar" />
+    </item>
+    <item
+        jar="C:\Users\Bliss\AndroidstudioProjects\Mod_Sim15\app\libs\GraphView-3.1.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="fde5ac3b4d45761447598d87b4c43cc4d143890a">
+        <dex dex="C:\Users\Bliss\AndroidstudioProjects\Mod_Sim15\app\build\intermediates\pre-dexed\debug\GraphView-3.1.1-1c0b4864a78178bedee34442692439d60a486c48.jar" />
+    </item>
+
+</items>
